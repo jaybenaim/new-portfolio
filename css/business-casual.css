@@ -227,7 +227,8 @@ p {
 }
 
 .footer {
-  background-color: rgba(47, 23, 15, 0.9);
+  background-color: rgba(0, 0, 0, 0.65);
+  font-size: 1.2em;
 }
 
 .text-primary {
