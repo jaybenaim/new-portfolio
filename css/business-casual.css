@@ -205,6 +205,10 @@ small {
   color: black !important;
   font-size: 0.8em;
 }
+.landing-title {
+  font-size: 1.4em;
+  font-weight: 600;
+}
 @media (min-width: 992px) {
   .about-heading .about-heading-img {
     position: relative;
