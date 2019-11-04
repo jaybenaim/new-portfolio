@@ -98,7 +98,16 @@ p {
   font-size: 0.3em;
 }
 .passion-span {
-  font-weight: 200 !important;
+  font-weight: 500 !important;
+  font-size: 0.9em !important;
+}
+/* CONTACT */
+.social-icons {
+  font-size: 1.6em;
+  margin-top: 20px;
+}
+.address a:hover {
+  cursor: p pointer;
 }
 @media (min-width: 992px) {
   #mainNav .navbar-nav .nav-item .nav-link {
@@ -172,8 +181,30 @@ p {
   left: -0.5rem;
   right: -0.5rem;
   border: 0.25rem solid rgba(255, 255, 255, 0.85);
+  z-index: -1;
 }
-
+.address a {
+  font-size: 1.5em;
+}
+.email {
+  font-size: 1.2em;
+}
+.email:hover {
+  cursor: pointer;
+}
+small {
+  font-size: 1.2em;
+}
+.phone-number {
+  font-size: 1em;
+}
+.phone-number:hover {
+  cursor: pointer;
+}
+.link {
+  color: black !important;
+  font-size: 0.8em;
+}
 @media (min-width: 992px) {
   .about-heading .about-heading-img {
     position: relative;
