@@ -106,6 +106,9 @@ p {
   font-size: 1.6em;
   margin-top: 20px;
 }
+.social-icons a {
+  color: #0085aa;
+}
 .address a:hover {
   cursor: p pointer;
 }
@@ -185,6 +188,7 @@ p {
 }
 .address a {
   font-size: 1.5em;
+  color: #0085aa;
 }
 .email {
   font-size: 1.2em;
