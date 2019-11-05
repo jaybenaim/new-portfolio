@@ -24,7 +24,9 @@ h6 {
 p {
   line-height: 1.75;
 }
-
+a:hover {
+  cursor: pointer;
+}
 .text-faded {
   color: rgba(255, 255, 255, 0.3);
 }
@@ -82,7 +84,7 @@ p {
 }
 
 #mainNav .navbar-brand {
-  color: #e6a756;
+  color: #00adb7;
 }
 
 #mainNav .navbar-nav .nav-item .nav-link {
@@ -112,6 +114,16 @@ p {
 .address a:hover {
   cursor: p pointer;
 }
+/* .top-about-content {
+  width: 70%;
+  margin-top: 40%;
+  z-index: 1;
+  top: 200px;
+} */
+/* .skills-header {
+  font-weight: 400 !important;
+  font-size: 1.6em !important;
+} */
 @media (min-width: 992px) {
   #mainNav .navbar-nav .nav-item .nav-link {
     font-size: 0.9rem;
@@ -213,6 +225,31 @@ small {
   font-size: 1.4em;
   font-weight: 600;
 }
+.index-contact-container {
+  font-size: 1.2em;
+}
+#index-contact-heading {
+  margin-bottom: 2px !important;
+}
+a {
+  color: #0085aa;
+}
+
+.copyright {
+  float: left;
+  margin-left: -10% !important;
+}
+
+#footer-contact-container {
+  margin-left: 60%;
+}
+
+#footer-contact-heading {
+  float: right;
+}
+.footer-section {
+  margin-top: -10%;
+}
 @media (min-width: 992px) {
   .about-heading .about-heading-img {
     position: relative;
@@ -266,7 +303,48 @@ small {
     font-size: 1.1rem;
   }
 }
+@media (max-width: 450px) {
+  .html {
+    width: 100%;
+    overflow: hidden;
+  }
+  .copyright {
+    margin-left: 0 !important;
+    font-size: 1em;
+  }
+  .copyright-phone {
+    float: left;
+    margin-left: -150%;
+  }
+  .footer-email {
+    display: inline-block;
+  }
+  .footer .fa-envelope-open {
+    float: left;
+    margin-top: 2%;
+    margin-left: -8%;
+  }
+  .footer {
+    font-size: 0.8em !important;
+  }
 
+  img:hover {
+    cursor: pointer;
+  }
+  .address strong {
+    font-size: 4em;
+  }
+  .address a {
+    font-size: 4em;
+  }
+}
+/* .address {
+  display: flex;
+  justify-content: center;
+} */
+.hide {
+  display: none;
+}
 .address strong {
   font-size: 1.2rem;
 }
