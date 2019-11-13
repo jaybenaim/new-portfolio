@@ -124,6 +124,22 @@ a:hover {
   font-weight: 400 !important;
   font-size: 1.6em !important;
 } */
+.personal-projects-container {
+  float: left;
+  margin: 3% 0 10% 20%;
+}
+.shop-it-title-container {
+  margin-top: 23%;
+  margin-right: -10%;
+}
+.about-me-content {
+  font-size: 1.2em;
+  text-align: center;
+}
+.learn-more a {
+  font-size: 1.4em;
+  letter-spacing: 1.2px;
+}
 @media (min-width: 992px) {
   #mainNav .navbar-nav .nav-item .nav-link {
     font-size: 0.9rem;
@@ -270,7 +286,8 @@ a {
   }
   .product-item .product-item-img {
     position: relative;
-    z-index: 0;
+    z-index: -1;
+
     max-width: 60vw;
   }
   .product-item .product-item-description {
