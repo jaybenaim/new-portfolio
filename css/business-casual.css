@@ -124,14 +124,7 @@ a:hover {
   font-weight: 400 !important;
   font-size: 1.6em !important;
 } */
-.personal-projects-container {
-  float: left;
-  margin: 3% 0 10% 20%;
-}
-.shop-it-title-container {
-  margin-top: 23%;
-  margin-right: -10%;
-}
+
 .about-me-content {
   font-size: 1.2em;
   text-align: center;
@@ -149,6 +142,14 @@ a:hover {
   }
   #mainNav .navbar-nav .nav-item.active .nav-link:hover {
     color: #00adb7;
+  }
+  .shop-it-title-container div {
+    margin-top: 23%;
+    margin-right: -10%;
+  }
+  .personal-projects-container {
+    float: left;
+    margin: 3% 0 10% 20%;
   }
 }
 
@@ -287,7 +288,6 @@ a {
   .product-item .product-item-img {
     position: relative;
     z-index: -1;
-
     max-width: 60vw;
   }
   .product-item .product-item-description {
@@ -353,6 +353,23 @@ a {
   }
   .address a {
     font-size: 4em;
+  }
+  .product-item-title {
+    padding: 1em !important;
+    margin: 0 0 10% 0 !important;
+    width: 100%;
+  }
+  .shop-it-title-container h2 {
+    font-size: 0.2em !important;
+  }
+  .community-title-container {
+    font-size: 0.1em !important;
+  }
+  .upper-heading {
+    /* font-size: 7em !important; */
+  }
+  .title {
+    font-size: 1.3em !important;
   }
 }
 /* .address {
