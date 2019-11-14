@@ -125,10 +125,6 @@ a:hover {
   font-size: 1.6em !important;
 } */
 
-.about-me-content {
-  font-size: 1.2em;
-  text-align: center;
-}
 .learn-more a {
   font-size: 1.4em;
   letter-spacing: 1.2px;
@@ -144,12 +140,26 @@ a:hover {
     color: #00adb7;
   }
   .shop-it-title-container div {
-    margin-top: 23%;
+    margin-top: 63%;
     margin-right: -10%;
+    z-index: 2 !important;
   }
   .personal-projects-container {
     float: left;
     margin: 3% 0 10% 20%;
+  }
+  .section-heading-upper {
+    /* font-size: 2em !important; */
+  }
+  .passion-span {
+    font-size: 1em !important;
+  }
+  .about-me-content {
+    font-size: 1.4em;
+    text-align: center;
+  }
+  .need-website {
+    font-size: 0.8em !important;
   }
 }
 
@@ -318,6 +328,12 @@ a {
   .list-hours {
     width: 50%;
     font-size: 1.1rem;
+  }
+  .github-contact-link {
+    font-family: Raleway;
+  }
+  .phone-number-hidden:hover {
+    display: list-item !important;
   }
 }
 @media (max-width: 450px) {
