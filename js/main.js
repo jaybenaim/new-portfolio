@@ -4,9 +4,23 @@ $(function() {
     sendEmailToGmail();
   });
 
-  $(".phone-number").click(() => {
+  $(".phone-number-hidden, .phone-number, .call-btn").click(() => {
     window.open("tel:6476404714");
   });
+  $(".phone-number-hidden").hide();
+  $(".phone-number").hover(
+    function() {
+      $(".phone-number").hide();
+      $(".phone-number-hidden").show();
+      $(".phone-number-hidden").css("font-size", "1.6em");
+    },
+    function() {
+      $(this)
+        .find("span")
+        .last()
+        .remove();
+    }
+  );
 });
 const sendEmailToGmail = () => {
   const subject = "Portfolio Contact Form";

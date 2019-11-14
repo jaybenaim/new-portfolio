@@ -332,10 +332,19 @@ a {
   .github-contact-link {
     font-family: Raleway;
   }
-  .phone-number-hidden:hover {
-    display: list-item !important;
+  /* .phone-number-hidden {
+    color: transparent;
+  } 
+  */
+  .phone-number-hidden:hover,
+  .call-btn {
+    cursor: pointer;
+  }
+  .freelance-title {
+    transition: ease-in;
   }
 }
+
 @media (max-width: 450px) {
   .html {
     width: 100%;
