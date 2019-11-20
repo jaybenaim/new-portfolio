@@ -1,0 +1,46 @@
+.right {
+  float: right;
+}
+.left {
+  float: left;
+}
+.chart-legend {
+  font-weight: 700;
+  color: black;
+  font-size: 1.2em;
+}
+.chartjs-render-monitor {
+  max-width: 500px;
+}
+/* Legend */
+.legend-heading {
+  text-align: center;
+  text-decoration: underline;
+}
+.color-box {
+  width: 14px;
+  height: 14px;
+  border: 1px solid black;
+}
+.color-box-1 {
+  background-color: #27a5e8;
+}
+.color-box-2 {
+  background-color: #75f27e;
+}
+.color-box-3 {
+  background-color: #20e8d7;
+}
+.color-box-4 {
+  background-color: rgba(255, 166, 0, 0.8);
+}
+.color-box-5 {
+  background-color: rgba(0, 208, 182, 1);
+}
+
+.legend-label {
+  margin-left: 20px;
+  margin-top: -8px;
+  text-transform: uppercase;
+  font-size: 0.8em;
+}

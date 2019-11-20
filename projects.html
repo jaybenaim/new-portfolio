@@ -42,6 +42,8 @@
     <!-- Custom styles for this template -->
     <link href="css/business-casual.min.css" rel="stylesheet" />
     <link href="css/business-casual.css" rel="stylesheet" />
+
+    <link href="css/pie-chart.css" rel="stylesheet" />
   </head>
 
   <body>
@@ -123,12 +125,12 @@
 
           <div class="product-item-description d-flex mr-auto">
             <div class="bg-faded p-5 rounded">
-              <span class="section-heading-upper landing-title">
+              <span class="section-heading-upper landing-title ">
                 <a href="https://kinsaleroad.ca/" target="blank">
                   Real-Estate Landing Page</a
                 ></span
               >
-              <div class="mb-0">
+              <div class="mb-0 ">
                 <br />
 
                 <span class="text-primary">Challenges</span>
@@ -136,11 +138,42 @@
                 <!-- <br /> 
                   <em>Click each challenge to see how I overcame it</em>
                   <br />  -->
-                <p class="challenge-hover">
-                  3-day deadline
-                </p>
+
                 <p>Google Analytics, &amp; Google Maps Api</p>
-                <p>jQuery slidshow and customised gallery</p>
+                <p>
+                  jQuery slidshow and customised gallery
+                </p>
+                <div class="pie-chart container">
+                  <div class="row">
+                    <div class="col">
+                      <span
+                        ><div class=" chart-pie pt-4 ">
+                          <canvas id="myPieChart"></canvas></div
+                      ></span>
+                    </div>
+                    <div class="col">
+                      <div class="chart-legend">
+                        <div class="row">
+                          <div class="col">
+                            <p class="legend-heading">Legend</p>
+                            <div class="row">
+                              <div class="color-box-1 color-box"></div>
+                              <p class="legend-label">Bootstrap</p>
+                            </div>
+                            <div class="row">
+                              <div class="color-box-2 color-box"></div>
+                              <p class="legend-label">css</p>
+                            </div>
+                            <div class="row">
+                              <div class="color-box-3 color-box"></div>
+                              <p class="legend-label">JavaScript</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -200,6 +233,137 @@
                   Incorporate sales and ads directed to customers as they pick
                   up nearby items
                 </p>
+                <div class="pie-chart container">
+                  <div class="row">
+                    <div class="col">
+                      <span
+                        ><div class=" chart-pie pt-4 ">
+                          <canvas id="myPieChart2"></canvas></div
+                      ></span>
+                    </div>
+                    <div class="col">
+                      <div class="chart-legend">
+                        <div class="row">
+                          <div class="col">
+                            <p class="legend-heading">Legend</p>
+                            <p>Front-End</p>
+
+                            <div class="row">
+                              <div class="color-box-1 color-box"></div>
+                              <p class="legend-label">React-Bootstrap</p>
+                            </div>
+                            <div class="row">
+                              <div class="color-box-2 color-box"></div>
+                              <p class="legend-label">css</p>
+                            </div>
+                            <div class="row">
+                              <div class="color-box-3 color-box"></div>
+                              <p class="legend-label">React</p>
+                            </div>
+                            <p>Back-End</p>
+                            <div class="row">
+                              <div class="color-box-4 color-box"></div>
+                              <p class="legend-label">Django</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="page-section">
+      <div class="container">
+        <div class="product-item">
+          <div class="product-item-title d-flex ">
+            <div
+              class="bg-faded p-5 d-flex mr-auto rounded community-title-container"
+            >
+              <h2 class="section-heading mb-0">
+                <span class="section-heading-upper upper-heading"
+                  >Neighbourhood building</span
+                >
+                <span class="section-heading-lower text-primary title"
+                  >Community</span
+                >
+              </h2>
+            </div>
+          </div>
+          <img
+            class="product-item-img mx-auto d-flex rounded img-fluid mb-3 mb-lg-0"
+            src="img/community.JPG"
+            alt="community app home page snapshot"
+          />
+          <div class="product-item-description d-flex ml-auto">
+            <div class="bg-faded p-5 rounded">
+              <span class="section-heading-upper landing-title"
+                ><a
+                  href="https://github.com/jaybenaim/community"
+                  target="blank"
+                >
+                  Community</a
+                ></span
+              >
+              - <em> An app bringing neighbours together again </em>
+              <br />
+              <em>React, Django, Python, JavaScript, Jest, PostgreSQL</em>
+              <div class="mb-0">
+                <br />
+                <span class="text-primary">Challenges</span>
+                <p>
+                  React & Django Communication
+                </p>
+                <p>Google Maps Api</p>
+                <p>jQuery slidshow and customised gallery</p>
+                <p>Adding custom chat system</p>
+                <p>Paired programming</p>
+                <div class="pie-chart container">
+                  <div class="row">
+                    <div class="col">
+                      <span
+                        ><div class=" chart-pie pt-4 ">
+                          <canvas id="myPieChart4"></canvas></div
+                      ></span>
+                    </div>
+                    <div class="col">
+                      <div class="chart-legend">
+                        <div class="row">
+                          <div class="col">
+                            <p class="legend-heading">Legend</p>
+                            <p>Front-End</p>
+                            <div class="row">
+                              <div class="color-box-1 color-box"></div>
+                              <p class="legend-label">React</p>
+                            </div>
+                            <div class="row">
+                              <div class="color-box-2 color-box"></div>
+                              <p class="legend-label">React-Bootstrap</p>
+                            </div>
+                            <div class="row">
+                              <div class="color-box-5 color-box"></div>
+                              <p class="legend-label">Jest</p>
+                            </div>
+
+                            <p>Back-End</p>
+                            <div class="row">
+                              <div class="color-box-3 color-box"></div>
+                              <p class="legend-label">Python</p>
+                            </div>
+                            <div class="row">
+                              <div class="color-box-4 color-box"></div>
+                              <p class="legend-label">Django</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -246,57 +410,38 @@
                   Finding all possible combinations to calculate winner
                 </p>
                 <p>Calculating winner by other means</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="page-section">
-      <div class="container">
-        <div class="product-item">
-          <div class="product-item-title d-flex ">
-            <div
-              class="bg-faded p-5 d-flex mr-auto rounded community-title-container"
-            >
-              <h2 class="section-heading mb-0">
-                <span class="section-heading-upper upper-heading"
-                  >Neighbourhood building</span
-                >
-                <span class="section-heading-lower text-primary title"
-                  >Community</span
-                >
-              </h2>
-            </div>
-          </div>
-          <img
-            class="product-item-img mx-auto d-flex rounded img-fluid mb-3 mb-lg-0"
-            src="img/community.JPG"
-            alt="community app home page snapshot"
-          />
-          <div class="product-item-description d-flex ml-auto">
-            <div class="bg-faded p-5 rounded">
-              <span class="section-heading-upper landing-title"
-                ><a
-                  href="https://github.com/jaybenaim/community"
-                  target="blank"
-                >
-                  Community</a
-                ></span
-              >
-              - <em> An app bringing neighbours together again </em>
-              <br />
-              <em>React, Django, Python, JavaScript, Jest</em>
-              <div class="mb-0">
-                <br />
-                <span class="text-primary">Challenges</span>
-                <p>
-                  React & Django Communication
-                </p>
-                <p>Google Maps Api</p>
-                <p>jQuery slidshow and customised gallery</p>
-                <p>Adding custom chat system</p>
-                <p>Paired programming</p>
+                <div class="pie-chart container">
+                  <div class="row">
+                    <div class="col">
+                      <span
+                        ><div class=" chart-pie pt-4 ">
+                          <canvas id="myPieChart3"></canvas></div
+                      ></span>
+                    </div>
+                    <div class="col">
+                      <div class="chart-legend">
+                        <div class="row">
+                          <div class="col">
+                            <p class="legend-heading">Legend</p>
+
+                            <div class="row">
+                              <div class="color-box-1 color-box"></div>
+                              <p class="legend-label">jQuery</p>
+                            </div>
+                            <div class="row">
+                              <div class="color-box-2 color-box"></div>
+                              <p class="legend-label">BootStrap</p>
+                            </div>
+                            <div class="row">
+                              <div class="color-box-3 color-box"></div>
+                              <p class="legend-label">HTML5</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -334,6 +479,40 @@
                 <p>CRUD operations</p>
                 <p>HTML, CSS slideshow</p>
                 <p>MongoDB, non-relational database</p>
+                <div class="pie-chart container">
+                  <div class="row">
+                    <div class="col">
+                      <span
+                        ><div class=" chart-pie pt-4 ">
+                          <canvas id="myPieChart5"></canvas></div
+                      ></span>
+                    </div>
+                    <div class="col">
+                      <div class="chart-legend">
+                        <div class="row">
+                          <div class="col">
+                            <p class="legend-heading">Legend</p>
+                            <p>Front-End</p>
+                            <div class="row">
+                              <div class="color-box-1 color-box"></div>
+                              <p class="legend-label">Node.js</p>
+                            </div>
+
+                            <p>Back-End</p>
+                            <div class="row">
+                              <div class="color-box-2 color-box"></div>
+                              <p class="legend-label">Express.js</p>
+                            </div>
+                            <div class="row">
+                              <div class="color-box-3 color-box"></div>
+                              <p class="legend-label">MongoDB</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -361,5 +540,12 @@
     <!-- Bootstrap core JavaScript -->
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+    <script src="js/landing-donut-chart.js"></script>
+    <script src="js/shop-donut-chart.js"></script>
+    <script src="js/tic-tac-donut-chart.js"></script>
+    <script src="js/community-donut-chart.js"></script>
+    <script src="js/yelpcamp-donut-chart.js"></script>
   </body>
 </html>
