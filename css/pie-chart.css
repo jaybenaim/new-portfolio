@@ -59,7 +59,7 @@
     margin-top: 20px;
   }
 }
-body:before {
+/* body:before {
   content: "";
   display: block;
   position: fixed;
@@ -73,4 +73,4 @@ body:before {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-}
+} */

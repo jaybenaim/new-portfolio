@@ -1,16 +1,11 @@
-.intro-text {
+.category-heading {
   animation-name: fadeIn;
-  animation-duration: 4s;
+  animation-duration: 5s;
   animation-iteration-count: 1;
 }
-.intro-button {
+.product-item {
   animation-name: fadeIn;
-  animation-duration: 7s;
-  animation-iteration-count: 1;
-}
-.intro-img {
-  animation-name: fadeIn;
-  animation-duration: 4s;
+  animation-duration: 3s;
   animation-iteration-count: 1;
 }
 .site-heading {
