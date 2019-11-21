@@ -22,6 +22,7 @@ $(function() {
     }
   );
 });
+
 const sendEmailToGmail = () => {
   const subject = "Portfolio Contact Form";
   const body = "Hey Jacob, ";

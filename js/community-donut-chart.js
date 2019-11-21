@@ -4,6 +4,30 @@
 Chart.defaults.global.defaultFontColor = "#858796";
 Chart.defaults.global.animation.easing = "easeInOutBack";
 
+$(function() {
+  // When the user scrolls down, hide the navbar. When the user scrolls up, show the navbar */
+  var prevScrollpos = window.pageYOffset;
+  window.onscroll = function() {
+    var currentScrollPos = window.pageYOffset;
+    if (prevScrollpos > currentScrollPos) {
+      Chart.helpers.each(Chart.instances, function(chart) {
+        let ctx = chart.chart.ctx;
+        let config = chart.config;
+        chart.destroy();
+        new Chart(ctx, config);
+      });
+    } else {
+      Chart.helpers.each(Chart.instances, function(chart) {
+        let ctx = chart.chart.ctx;
+        let config = chart.config;
+        chart.destroy();
+        new Chart(ctx, config);
+      });
+      //   Chart.defaults.global.animation.easing = "easeInOutBack";
+    }
+    prevScrollpos = currentScrollPos;
+  };
+});
 // Pie Chart Example
 var ctx = document.getElementById("myPieChart4");
 var myPieChart = new Chart(ctx, {
