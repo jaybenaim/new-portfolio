@@ -396,6 +396,9 @@ a {
   .title {
     font-size: 1.3em !important;
   }
+  .text-align-center {
+    text-align: center;
+  }
 }
 /* .address {
   display: flex;
