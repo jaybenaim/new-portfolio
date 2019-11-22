@@ -1,6 +1,6 @@
 {
-  "title": "Business Casual",
-  "name": "startbootstrap-business-casual",
+  "title": "My Portfolio",
+  "name": "Jacob Benaim Portfolio",
   "version": "5.0.9",
   "scripts": {
     "start": "node_modules/.bin/gulp watch"
@@ -15,15 +15,16 @@
     "theme",
     "template"
   ],
-  "homepage": "https://startbootstrap.com/template-overviews/business-casual",
+  "homepage": "jacobbenaim.ca",
   "bugs": {
-    "url": "https://github.com/BlackrockDigital/startbootstrap-business-casual/issues",
-    "email": "feedback@startbootstrap.com"
+    "url": "https://github.com/jaybenaim/new-portfolio/issues",
+    "email": "benaimjacob@gmail.com"
   },
   "license": "MIT",
   "author": "Start Bootstrap",
   "contributors": [
-    "David Miller (http://davidmiller.io/)"
+    "David Miller (http://davidmiller.io/)",
+    "Jacob Benaim"
   ],
   "repository": {
     "type": "git",
