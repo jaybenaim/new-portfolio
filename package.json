@@ -1,6 +1,6 @@
 {
-  "title": "My Portfolio",
-  "name": "Jacob Benaim Portfolio",
+  "title": "Business Casual",
+  "name": "jacob-benaim-portfolio",
   "version": "5.0.9",
   "scripts": {
     "start": "node_modules/.bin/gulp watch"
