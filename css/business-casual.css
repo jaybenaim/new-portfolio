@@ -350,7 +350,7 @@ a {
     background: url(../img/coffee.JPG);
     background-size: cover;
     background-repeat: no-repeat;
-    /* background-attachment: fixed; */
+    background-attachment: fixed;
     opacity: 0.99;
   }
   .body:before {
