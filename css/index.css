@@ -26,3 +26,6 @@
     opacity: 1;
   }
 }
+.fa:hover {
+  text-decoration: none;
+}
