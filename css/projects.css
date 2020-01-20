@@ -21,3 +21,13 @@
     opacity: 1;
   }
 }
+.hidden-challenge-text {
+  display: none;
+  background: rgba(0, 0, 0, 0.2);
+  border: 1px solid #eee;
+  padding: 30px;
+}
+
+.hidden-challenge-container:hover {
+  cursor: pointer;
+}

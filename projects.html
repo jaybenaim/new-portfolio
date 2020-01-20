@@ -236,14 +236,16 @@
               <div class="mb-0">
                 <br />
                 <span class="text-primary">Challenges</span>
-                <p>Rerendering components when updating list</p>
-                <p>
-                  Solving the issue of store owners moving products to keep
-                  customers intrigued by new items
-                </p>
+                <div class="hidden-challenge-container"> 
+                  <p class="shown-challenge-text">Dealing with state</p>
+                  <p class="hidden-challenge-text">To Redux OR NOT to Redux</p>
+                </div>
+                <div class="hidden-challenge-container"> 
+                  <p class="shown-challenge-text">Updating state and refreshing components</p>
+                  <p class="hidden-challenge-text">Solved by re-calling database</p>
+                </div>
                 <span class="text-primary">Future Goals</span>
                 <p>Mapping the store</p>
-                <p>Finding product info to create auto-complete search</p>
                 <p>
                   Incorporate sales and ads directed to customers as they pick
                   up nearby items
@@ -673,6 +675,7 @@
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+    <script src="js/projects.js"></script>
     <script src="js/landing-donut-chart.js"></script>
     <script src="js/shop-donut-chart.js"></script>
     <script src="js/tic-tac-donut-chart.js"></script>
