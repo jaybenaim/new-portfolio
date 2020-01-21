@@ -31,3 +31,35 @@
 .hidden-challenge-container:hover {
   cursor: pointer;
 }
+.tic-tac-toe-heading-container {
+  justify-content: flex-end;
+}
+
+@media (min-width: 451px) {
+  .card-games-image-container {
+    background: url(../img/war-desktop.JPG);
+    height: 400px;
+    width: 100%;
+    background-size: cover;
+    margin-bottom: 4%;
+    border: none;
+    border-radius: 0.5%;
+  }
+  .card-games-image-container img {
+    display: none !important;
+  }
+}
+@media (max-width: 450px) {
+  .card-games-image-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 491px;
+  }
+  .card-games-image {
+    height: 40em;
+    border: 1px solid black;
+    position: absolute;
+    margin-top: -85px;
+    clip: rect(61px, 312px, 563px, 37px);
+  }
+}
