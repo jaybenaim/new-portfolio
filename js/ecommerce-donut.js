@@ -33,21 +33,23 @@ var ctx = document.getElementById("myPieChart7");
 var myPieChart = new Chart(ctx, {
   type: "doughnut",
   data: {
-    labels: ["React", "MongoDB", "Express.js", "Node.js"],
+    labels: ["React", "MongoDB", "Express.js", "Node.js", "Redux"],
     datasets: [
       {
-        data: [25, 30, 30, 15],
+        data: [25, 25, 20, 10, 25],
         backgroundColor: [
           "rgba(39, 165, 232, 0.8)",
           "rgba(117, 242, 126, 0.8)",
           "rgba(32, 232, 215, 0.8)",
-          "rgba(0, 208, 182, 0.8)"
+          "rgba(0, 208, 182, 0.8)",
+          "rgba(255, 166, 0, 0.8)"
         ],
         hoverBackgroundColor: [
           "rgba(39, 165, 232, 1)",
           "rgba(117, 242, 126, 1)",
           "rgba(32, 232, 215, 1)",
-          "rgba(0, 208, 182, 1)"
+          "rgba(0, 208, 182, 1)",
+          "rgba(255, 166, 0, 1)"
         ],
         hoverBorderColor: "rgba(234, 236, 244, 1)"
       }
