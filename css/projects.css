@@ -74,9 +74,6 @@
   .community-header {
     margin-left: -6%;
   }
-  .footer .phone-number-hidden {
-    display: none;
-  }
 }
 @media (min-width: 789px) {
   .e-commerce-image-container {
@@ -95,4 +92,7 @@
   .shop-it-header {
     margin-top: -60%;
   }
+}
+.footer .phone-number-hidden {
+  display: none;
 }
