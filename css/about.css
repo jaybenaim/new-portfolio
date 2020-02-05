@@ -11,3 +11,20 @@
   border-radius: 2%;
   margin-top: -5%;
 }
+@media (max-width: 450px) {
+  .about-me-content p {
+    text-align: center;
+  }
+  .skill-icons-left {
+    display: flex;
+    justify-content: left;
+    flex-direction: row;
+    margin-left: -3%;
+  }
+  .skill-icons-right {
+    display: flex;
+    justify-content: right;
+    flex-direction: row;
+    margin-left: -6%;
+  }
+}
