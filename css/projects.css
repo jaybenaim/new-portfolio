@@ -71,6 +71,7 @@
     font-family: Raleway;
     font-weight: 100 !important;
   }
+
   .community-header {
     margin-left: -6%;
   }
@@ -89,8 +90,9 @@
   .personal-projects-container h2 {
     width: 100%;
   }
+
   .shop-it-header {
-    margin-top: -60%;
+    margin-top: 14%;
   }
 }
 .footer .phone-number-hidden {
