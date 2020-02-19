@@ -3,10 +3,25 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
   }
-  .certificate-item > img {
+  .certificate-grid-container h3,
+  .certificate-grid-container h4 {
+    grid-column: 1 / span 2;
+    margin: 0 auto;
+    font-family: Raleway, sans-serif;
+    margin-top: 5%;
+  }
+  .certificate-grid-container h4 {
+    margin-top: 0%;
+  }
+
+  .certificate-item > a > img {
     width: 204px;
     height: 200px;
     padding: 14% 5% 14% 5%;
+  }
+  #GA-item {
+    grid-column: 1 / span 2;
+    margin: 0 auto;
   }
   .first-item {
     margin-left: 2%;

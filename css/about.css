@@ -28,3 +28,9 @@
     margin-left: -6%;
   }
 }
+@media (min-width: 451px) {
+  .skills-container {
+    display: flex;
+    justify-content: center;
+  }
+}
