@@ -2,6 +2,13 @@
   animation-name: fadeIn;
   animation-duration: 4s;
   animation-iteration-count: 1;
+  margin: 0 auto;
+  font-size: 0.8em !important;
+}
+#perseverance {
+  margin: 0 auto;
+  font-size: 0.8em;
+  font-weight: 200;
 }
 .intro-button {
   animation-name: fadeIn;

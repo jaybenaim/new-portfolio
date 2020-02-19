@@ -1,0 +1,19 @@
+@media (max-width: 440px) {
+  .certificate-grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .certificate-item > img {
+    width: 204px;
+    height: 200px;
+    padding: 14% 5% 14% 5%;
+  }
+  .first-item {
+    margin-left: 2%;
+    padding-right: 2%;
+  }
+}
+@media (min-width: 441px) {
+  .certificate-grid-container {
+  }
+}
