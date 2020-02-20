@@ -33,11 +33,23 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
   }
+
   .certificate-grid-container h4 {
+    grid-column: 1;
     margin: 20%;
     font-size: 4em;
     color: #000;
     font-weight: 900;
+    margin-top: 40%;
+  }
+  .certificate-grid-container h3 {
+    grid-column: 1 / span 2;
+    margin: 0 auto;
+    font-size: 4em;
+    color: #000;
+    font-weight: 900;
+    padding-top: 4%;
+    padding-bottom: 4%;
   }
   .certificate-item > a > img {
     max-width: 604px;
@@ -48,6 +60,9 @@
   #GA-item {
     grid-column: 1 / span 2;
     margin: 0 auto;
+  }
+  .first-item {
+    margin-top: 30%;
   }
   .left-item {
     margin-left: 10%;
