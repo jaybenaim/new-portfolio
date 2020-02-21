@@ -7,7 +7,7 @@ if (!isset($_SERVER['HTTP_ORIGIN'])) {
 
     $wildcard = FALSE; // Set $wildcard to TRUE if you do not plan to check or limit the domains
     $credentials = FALSE; // Set $credentials to TRUE if expects credential requests (Cookies, Authentication, SSL certificates)
-    $allowedOrigins = array('http://localhost:5500', 'http://127.0.0.1:5502', 'https://jacobbenaim.ca/php');
+    $allowedOrigins = array('https://jacobbenaim.ca', 'http://localhost:5502');
     if (!in_array($_SERVER['HTTP_ORIGIN'], $allowedOrigins) && !$wildcard) {
         // Origin is not allowed
         exit;
@@ -20,7 +20,7 @@ if (!isset($_SERVER['HTTP_ORIGIN'])) {
     }
     header("Access-Control-Allow-Methods: POST, GET, OPTIONS");
     header("Access-Control-Allow-Headers: Origin");
-    header('P3P: CP="CAO PSA OUR"'); // Makes IE to support cookies
+    header('P3P: CP="CAO PSA OUR"'); // Makes IE support cookies
 
     // Handling the Preflight
     if ($_SERVER['REQUEST_METHOD'] == 'OPTIONS') {
