@@ -13,7 +13,7 @@ $(function() {
   });
 });
 async function postData(formattedFormData) {
-  const response = await fetch("http://localhost/home/newname.php", {
+  const response = await fetch("https://jacobbenaim.ca/php/submit.php", {
     method: "POST",
     body: formattedFormData
   });
