@@ -1,4 +1,7 @@
 @media (max-width: 440px) {
+  .certificates-body {
+    background-position-y: -20%;
+  }
   .certificate-grid-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -12,6 +15,7 @@
   }
   .certificate-grid-container h4 {
     margin-top: 0%;
+    color: #fff;
   }
 
   .certificate-item > a > img {
@@ -22,6 +26,9 @@
   #GA-item {
     grid-column: 1 / span 2;
     margin: 0 auto;
+  }
+  #GA-item a img {
+    height: 20em;
   }
   .first-item {
     margin-left: 2%;
