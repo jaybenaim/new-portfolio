@@ -1,0 +1,3 @@
+$(function() {
+  $(".about-slider").slick();
+});
