@@ -16,14 +16,17 @@ $(function() {
   });
 });
 async function postData(formattedFormData) {
-  const response = await fetch("http://localhost:3000/email", {
-    method: "POST",
-    headers: {
-      Accept: "application/json",
-      "Content-Type": "application/json"
-    },
-    body: JSON.stringify(formattedFormData)
-  });
+  const response = await fetch(
+    "https://jays-portfolio-backend.herokuapp.com/email",
+    {
+      method: "POST",
+      headers: {
+        Accept: "application/json",
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(formattedFormData)
+    }
+  );
   const data = await response.json();
   displayAlert(data);
 }
