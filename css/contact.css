@@ -115,3 +115,148 @@ select {
 textarea {
   padding: 0.75em 1em;
 }
+
+input[type="submit"],
+input[type="reset"],
+input[type="button"],
+button,
+.button {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  -moz-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+  -webkit-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+  -ms-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+  background: #19b5fe;
+  color: #fff;
+  border-radius: 4px;
+  border: 0;
+  cursor: pointer;
+  display: inline-block;
+  font-weight: 700;
+  height: 2.85em;
+  line-height: 2.95em;
+  padding: 0 1.5em;
+  text-align: center;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+input[type="submit"].active,
+input[type="reset"].active,
+input[type="button"].active,
+button.active,
+.button.active {
+  color: #fff;
+  background: #22313f;
+}
+
+input[type="submit"].active:hover,
+input[type="reset"].active:hover,
+input[type="button"].active:hover,
+button.active:hover,
+.button.active:hover {
+  color: #fff;
+  background: #22313f;
+}
+
+input[type="submit"]:hover,
+input[type="reset"]:hover,
+input[type="button"]:hover,
+button:hover,
+.button:hover {
+  color: #fff;
+  background: #019be3;
+}
+
+input[type="submit"].alt,
+input[type="reset"].alt,
+input[type="button"].alt,
+button.alt,
+.button.alt {
+  background: none;
+  box-shadow: 0 0 0 2px rgba(144, 144, 144, 0.25);
+}
+
+input[type="submit"].alt:hover,
+input[type="reset"].alt:hover,
+input[type="button"].alt:hover,
+button.alt:hover,
+.button.alt:hover {
+  background: rgba(144, 144, 144, 0.075);
+  box-shadow: 0 0 0 2px rgba(144, 144, 144, 0.25);
+}
+
+input[type="submit"].icon,
+input[type="reset"].icon,
+input[type="button"].icon,
+button.icon,
+.button.icon {
+  padding-left: 1.35em;
+}
+
+input[type="submit"].icon:before,
+input[type="reset"].icon:before,
+input[type="button"].icon:before,
+button.icon:before,
+.button.icon:before {
+  margin-right: 0.5em;
+}
+
+input[type="submit"].fit,
+input[type="reset"].fit,
+input[type="button"].fit,
+button.fit,
+.button.fit {
+  display: block;
+  margin: 0 0 1em 0;
+  width: 100%;
+}
+
+input[type="submit"].small,
+input[type="reset"].small,
+input[type="button"].small,
+button.small,
+.button.small {
+  font-size: 0.8em;
+}
+
+input[type="submit"].big,
+input[type="reset"].big,
+input[type="button"].big,
+button.big,
+.button.big {
+  font-size: 1.35em;
+  padding: 0 2em;
+}
+
+input[type="submit"].disabled,
+input[type="submit"]:disabled,
+input[type="reset"].disabled,
+input[type="reset"]:disabled,
+input[type="button"].disabled,
+input[type="button"]:disabled,
+button.disabled,
+button:disabled,
+.button.disabled,
+.button:disabled {
+  -moz-pointer-events: none;
+  -webkit-pointer-events: none;
+  -ms-pointer-events: none;
+  pointer-events: none;
+  opacity: 0.25;
+}
+
+@media screen and (max-width: 480px) {
+  input[type="submit"],
+  input[type="reset"],
+  input[type="button"],
+  button,
+  .button {
+    padding: 0;
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+}
