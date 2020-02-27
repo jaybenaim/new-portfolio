@@ -248,7 +248,16 @@ button:disabled,
   pointer-events: none;
   opacity: 0.25;
 }
-
+.submit-button {
+  margin: 0;
+}
+.actions {
+  padding: 0;
+  margin: 0;
+}
+.actions li {
+  list-style: none;
+}
 @media screen and (max-width: 480px) {
   input[type="submit"],
   input[type="reset"],
