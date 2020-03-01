@@ -2,7 +2,7 @@ const form = document.querySelector("form");
 const displayAlert = data => {
   const { name, email, message } = data;
 
-  const messageConfirmed = `<div> <br /> Message sent.<br />  </div> <br /> <div>Message: <p> ${message} </p>  from ${name} - ${email}</div> `;
+  const messageConfirmed = `<div> <br /> Message sent.<br />  </div> <br /> <div>Message: <p> ${message} </p>  from ${name} - ${email}<br /> </div> `;
   $("form").prepend(messageConfirmed);
 };
 
