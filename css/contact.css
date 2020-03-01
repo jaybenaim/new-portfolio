@@ -258,6 +258,7 @@ button:disabled,
 .actions li {
   list-style: none;
 }
+
 @media screen and (max-width: 480px) {
   input[type="submit"],
   input[type="reset"],
@@ -268,4 +269,7 @@ button:disabled,
     padding-left: 10%;
     padding-right: 10%;
   }
+}
+.cta-heading {
+  padding-bottom: 10%;
 }
