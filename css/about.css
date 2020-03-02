@@ -43,11 +43,33 @@
     font-size: 2.4em;
     color: #00adb7;
     font-weight: 600;
+    background: transparent;
+    border: none;
   }
 }
 @media (min-width: 451px) {
   .skills-container {
     display: flex;
     justify-content: center;
+  }
+  /* Slick */
+
+  .about-slider div {
+    text-align: center;
+    margin-top: 1%;
+  }
+  .slick-nav {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20%;
+    margin-top: 15%;
+  }
+  .slick-nav button {
+    padding: 0 30% 0 30%;
+    font-size: 3.2em;
+    color: #00adb7;
+    font-weight: 600;
+    background: transparent !important;
+    border: none !important;
   }
 }
