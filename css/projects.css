@@ -1,3 +1,11 @@
+body {
+  font-family: "Lora";
+  background-image: url("../img/coffee.JPG");
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  background-repeat: repeat;
+}
 .category-heading {
   animation-name: fadeIn;
   animation-duration: 5s;
