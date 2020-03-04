@@ -60,12 +60,12 @@
     position: absolute;
   }
   .slick-prev-hidden {
-    top: 50%;
+    top: 48%;
     left: 20%;
     z-index: 5;
   }
   .slick-next-hidden {
-    top: 50%;
+    top: 48%;
     right: 20%;
   }
 }
