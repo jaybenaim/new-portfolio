@@ -1,9 +1,9 @@
 #projects {
   font-family: "Lora";
-  background-image: url("../img/coffee.JPG");
-  background-attachment: fixed;
+  background-image: url("../img/coffee.JPG") !important;
+  background-attachment: fixed !important;
   background-position: center;
-  background-size: contain;
+  background-size: cover;
 }
 .category-heading {
   animation-name: fadeIn;
