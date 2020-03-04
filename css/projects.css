@@ -4,7 +4,6 @@
   background-attachment: fixed !important;
   background-position: center;
   background-size: cover;
-  background-repeat: no-repeat;
 }
 .category-heading {
   animation-name: fadeIn;
