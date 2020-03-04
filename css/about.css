@@ -68,6 +68,13 @@
     top: 48%;
     right: 20%;
   }
+  [alt="javascript icon"],
+  [alt="python icon"] {
+    margin-top: 24px;
+  }
+  [alt="postgresql icon"] {
+    margin-top: -15%;
+  }
 }
 @media (min-width: 451px) {
   .skills-container {
