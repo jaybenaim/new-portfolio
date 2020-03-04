@@ -46,6 +46,28 @@
     background: transparent;
     border: none;
   }
+
+  .hidden-container-prev,
+  .hidden-container-next {
+    font-weight: 600;
+    font-size: 2.4em;
+  }
+  .hidden-container-prev button,
+  .hidden-container-next button {
+    color: rgba(0, 0, 0, 0.2);
+    background: transparent;
+    border: none;
+    position: absolute;
+  }
+  .slick-prev-hidden {
+    top: 40%;
+    left: 20%;
+    z-index: 5;
+  }
+  .slick-next-hidden {
+    top: 40%;
+    right: 20%;
+  }
 }
 @media (min-width: 451px) {
   .skills-container {
@@ -53,7 +75,10 @@
     justify-content: center;
   }
   /* Slick */
-
+  .hidden-container-prev,
+  .hidden-container-next {
+    display: none;
+  }
   .about-slider div {
     text-align: center;
     margin-top: 1%;
