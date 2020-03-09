@@ -125,4 +125,32 @@
     background: transparent !important;
     border: none !important;
   }
+  .slick-dots {
+    padding: 0 !important;
+    display: flex;
+    justify-content: center;
+    padding-right: 5%;
+    margin-top: 5%;
+  }
+
+  [role="presentation"] {
+    border: 1px solid #00adb7;
+    border-radius: 50%;
+    display: inline-block;
+    margin-left: 5%;
+    height: 0.98rem;
+  }
+  .about-slide {
+    background: transparent !important;
+  }
+  .slick-active {
+    background: #00adb7;
+  }
+  [role="presentation"] button {
+    background: transparent;
+    border: none;
+  }
+  [role="presentation"] button:focus {
+    display: none;
+  }
 }
