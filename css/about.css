@@ -75,6 +75,27 @@
   [alt="postgresql icon"] {
     margin-top: -15%;
   }
+  .slick-dots {
+    padding: 0 !important;
+    display: flex;
+    justify-content: center;
+    padding-right: 5%;
+    margin-top: 5%;
+  }
+
+  [role="presentation"] {
+    border: 1px solid #00adb7;
+    border-radius: 50%;
+    display: inline-block;
+    margin-left: 5%;
+    height: 0.98rem;
+  }
+  .about-slide {
+    background: transparent !important;
+  }
+  .slick-active {
+    background: #00adb7;
+  }
 }
 @media (min-width: 451px) {
   .skills-container {
