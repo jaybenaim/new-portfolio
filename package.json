@@ -33,8 +33,10 @@
     "url": "https://github.com/jaybenaim/new-portfolio"
   },
   "dependencies": {
+    "@popperjs/core": "^2.4.0",
     "bootstrap": "4.3.1",
-    "jquery": "3.4.1"
+    "jquery": "3.4.1",
+    "popper": "^1.0.1"
   },
   "devDependencies": {
     "browser-sync": "2.26.7",
