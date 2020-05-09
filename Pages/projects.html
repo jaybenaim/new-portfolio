@@ -45,14 +45,12 @@
 
     <link href="../css/pie-chart.css" rel="stylesheet" />
     <link href="../css/projects.css" rel="stylesheet" />
-  </head>
+  
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script></head>
 
   <body id="projects">
-    <h1 class="site-heading text-center text-white d-none d-lg-block">
-      <span class="site-heading-upper mb-3">Projects</span>
-      <span class="site-heading-lower text-primary ">Jacob Benaim</span>
-    </h1>
-
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark py-lg-4" id="mainNav">
       <div class="container">
@@ -120,21 +118,130 @@
         </div>
       </div>
     </nav>
+    <h1 class="site-heading text-center text-white d-none d-lg-block">
+      <span class="site-heading-upper mb-3">Projects</span>
+      <span class="site-heading-lower text-primary">Jacob Benaim</span>
+    </h1>
 
+    <!-- Freelance Projects -->
+    <div class="product-item-title d-flex">
+      <div class="bg-faded p-5 d-flex ml-auto rounded category-heading">
+        <h2 class="section-heading mb-0">
+          <span
+            class="section-heading-lower text-primary title freelance-title text-align-center"
+            >Freelance Projects</span
+          >
+        </h2>
+      </div>
+    </div>
+    <section class="page-section" id="dolcenada">
+      <div class="container">
+        <div class="product-item">
+          <img
+            class="product-item-img mx-auto d-flex rounded img-fluid mb-3 mb-lg-0"
+            src="../img/dolcenada.png"
+            alt="dolcenada screenshot of home page that contains a navbar with  a checkout cart, a gallary tab, and registration. The main image of cookies takes up the remaining portion"
+          />
+
+          <div class="product-item-description d-flex mr-auto">
+            <div class="bg-faded p-5 rounded">
+              <span class="section-heading-upper landing-title">
+                <a href="https://dolcenada.ca/" target="blank">
+                  Dolce Nada
+                </a>
+              </span>
+              <br />
+              <em>E-commerce site </em>
+              <div class="mb-0">
+                <br />
+                <span class="text-primary">Challenges & Features</span>
+                <div class="hidden-challenge-container">
+                  <p class="shown-challenge-text">
+                    Simplified components by using a global state management
+                    tool to help build.
+                      <span class="glyphicon">&#xe094;</span>
+                  </p>
+                  <p class="hidden-challenge-text">
+                    Introducing Redux and Redux-thunk to for state management
+                  </p>
+                </div>
+                <div class="hidden-challenge-container">
+                  <p class="shown-challenge-text">
+                    Finding an API that was affordable, and effective.
+                  </p>
+                  <p class="hidden-challenge-text">
+                    Incorporated sendGrid API to send e-mail order forms to the
+                    client according to orders from users.
+                  </p>
+                </div>
+                <div class="hidden-challenge-container">
+                  <p class="shown-challenge-text">
+                    Utilized react hooks and functional components
+                  </p>
+                  <p class="hidden-challenge-text">
+                    First project to use only functional components, opposed to
+                    class components.
+                  </p>
+                </div>
+                <div class="hidden-challenge-container">
+                  <p class="shown-challenge-text">
+                    Features in progress
+                  </p>
+                  <div class="hidden-challenge-text">
+                    <ul>
+                      <li>Stripe, Paypal, additional payment methods</li>
+                      <li>
+                        Order by dozens incorporated into the cart actions
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="pie-chart container">
+                  <div class="row">
+                    <div class="col">
+                      <span
+                        ><div class="chart-pie dolcenada">
+                          <canvas id="dolcenadaChart"></canvas></div
+                      ></span>
+                    </div>
+                    <div class="col">
+                      <div class="chart-legend">
+                        <p class="legend-heading">Legend</p>
+                        <div class="row">
+                          <div class="color-box-1 color-box"></div>
+                          <p class="legend-label">React</p>
+                        </div>
+                        <div class="row">
+                          <div class="color-box-2 color-box"></div>
+                          <p class="legend-label">
+                            Material-UI
+                          </p>
+                        </div>
+                        <div class="row">
+                          <div class="color-box-3 color-box"></div>
+                          <p class="legend-label">Express.js</p>
+                        </div>
+                        <div class="row">
+                          <div class="color-box-4 color-box"></div>
+                          <p class="legend-label">Node.js</p>
+                        </div>
+                        <div class="row">
+                          <div class="color-box-4 color-box"></div>
+                          <p class="legend-label">MongoDB</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
     <section class="page-section" id="real-estate">
       <div class="container">
         <div class="product-item">
-          <div class="product-item-title d-flex">
-            <div class="bg-faded p-5 d-flex ml-auto rounded category-heading">
-              <h2 class="section-heading mb-0">
-                <span
-                  class="section-heading-lower text-primary title freelance-title text-align-center"
-                  >Freelance Projects</span
-                >
-              </h2>
-            </div>
-          </div>
-
           <img
             class="product-item-img mx-auto d-flex rounded img-fluid mb-3 mb-lg-0"
             src="../img/kinsale.JPG"
@@ -143,12 +250,12 @@
 
           <div class="product-item-description d-flex mr-auto">
             <div class="bg-faded p-5 rounded">
-              <span class="section-heading-upper landing-title ">
+              <span class="section-heading-upper landing-title">
                 <a href="https://kinsaleroad.ca/" target="blank">
                   Real-Estate Landing Page</a
                 ></span
               >
-              <div class="mb-0 ">
+              <div class="mb-0">
                 <br />
 
                 <span class="text-primary">Challenges & Features</span>
@@ -162,7 +269,7 @@
                   <div class="row">
                     <div class="col">
                       <span
-                        ><div class=" chart-pie pt-4 ">
+                        ><div class="chart-pie pt-4">
                           <canvas id="myPieChart"></canvas></div
                       ></span>
                     </div>
@@ -195,614 +302,9 @@
         </div>
       </div>
     </section>
-    <div class="product-item-title d-flex personal-projects-container">
-      <div class="bg-faded p-5 d-flex ml-auto rounded">
-        <h2 class="section-heading mb-0">
-          <span class="section-heading-lower text-primary text-align-center"
-            >Personal Projects</span
-          >
-        </h2>
-      </div>
+
+  
     </div>
-
-    <section class="page-section" id="ecommerce">
-      <div class="container">
-        <div class="product-item">
-          <div class="product-item-title d-flex">
-            <div class="bg-faded p-5 d-flex ml-auto rounded e-commerce-heading">
-              <h2 class="section-heading mb-0 ">
-                <span class="section-heading-upper">M.E.R.N. Stack</span>
-                <span class="section-heading-lower landing-title ">
-                  <a href="https://github.com/jaybenaim/isell" target="_blank">
-                    E-Commerce Template</a
-                  ></span
-                >
-              </h2>
-            </div>
-          </div>
-          <div class="e-commerce-image-container"></div>
-
-          <div
-            class="product-item-description e-commerce-description d-flex mr-auto"
-          >
-            <div class="bg-faded p-5 rounded">
-              <span class="section-heading-lower"> </span>
-              <span class="section-heading-upper landing-title"
-                ><a href="https://jaybenaim.github.io/isell/" target="_blank">
-                  E-Commerce Template</a
-                ></span
-              >
-              -
-              <em>
-                A template for a single client's personal store with Stripe
-                payments
-              </em>
-              <br />
-              <div class="mb-0">
-                <br />
-                <span class="text-primary">Challenges & Features</span>
-
-                <div class="hidden-challenge-container">
-                  <p class="shown-challenge-text">
-                    Incorporating secure payments
-                  </p>
-                  <p class="hidden-challenge-text">
-                    Found Stripe was a reliable library and incorporated custom
-                    components
-                  </p>
-                </div>
-
-                <div class="hidden-challenge-container">
-                  <p class="shown-challenge-text">
-                    Using a non-relational database
-                  </p>
-                  <p class="hidden-challenge-text">
-                    Simple authentication using json web tokens. Manually pull
-                    data or pull from database depending on product list size
-                  </p>
-                </div>
-                <div class="hidden-challenge-container">
-                  <p class="shown-challenge-text">
-                    Learning and integrating redux to a built app
-                  </p>
-                  <p class="hidden-challenge-text">
-                    Went through several tutorials, trial and error and within a
-                    few days Redux was understood and applied.
-                  </p>
-                </div>
-
-                <div class="pie-chart container">
-                  <div class="row">
-                    <div class="col">
-                      <span
-                        ><div class=" chart-pie pt-4 ">
-                          <canvas id="myPieChart7"></canvas></div
-                      ></span>
-                    </div>
-                    <div class="col">
-                      <div class="chart-legend">
-                        <div class="row">
-                          <div class="col ">
-                            <p class="legend-heading">Legend</p>
-                            <p>Front-End</p>
-                            <div class="row">
-                              <div class="color-box-1 color-box"></div>
-                              <p class="legend-label">React.js</p>
-                            </div>
-                            <div class="row">
-                              <div class="color-box-4 color-box"></div>
-                              <p class="legend-label">Redux</p>
-                            </div>
-                            <p>Back-End</p>
-                            <div class="row">
-                              <div class="color-box-2 color-box"></div>
-                              <p class="legend-label">MongoDB</p>
-                            </div>
-                            <div class="row">
-                              <div class="color-box-3 color-box"></div>
-                              <p class="legend-label">Express.js</p>
-                            </div>
-                            <div class="row">
-                              <div class="color-box-5 color-box"></div>
-                              <p class="legend-label">Node.js</p>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <div class="product-item-title d-flex personal-projects-container">
-      <div class="bg-faded p-5 d-flex ml-auto rounded">
-        <h2 class="section-heading mb-0">
-          <span class="section-heading-lower text-primary text-align-center"
-            >Projects in Progress</span
-          >
-        </h2>
-      </div>
-    </div>
-    <section class="page-section" id="shop-it">
-      <div class="container">
-        <div class="product-item shop-it-header">
-          <div class="product-item-title d-flex shop-it-title-container">
-            <div class="bg-faded p-5 d-flex ml-auto rounded">
-              <h2 class="section-heading mb-0">
-                <span class="section-heading-upper upper-heading "
-                  >Grocery Store Mapping App</span
-                >
-                <span
-                  class="section-heading-lower landing-title shop-it-heading"
-                >
-                  <a
-                    href="https://jaybenaim.github.io/shop_it_django/"
-                    target="_blank"
-                    >Shop It
-                  </a></span
-                >
-              </h2>
-            </div>
-          </div>
-          <img
-            class="product-item-img mx-auto d-flex rounded img-fluid mb-3 mb-lg-0"
-            src="../img/desktopShopIt.JPG"
-            alt="shop it snapshot of home page with main image of shopping cart and three sub headings in a horizontal grid"
-          />
-
-          <div class="product-item-description d-flex mr-auto">
-            <div class="bg-faded p-5 rounded">
-              <span class="section-heading-upper landing-title"
-                ><a href="https://jaybenaim.github.io/shop_it_django/"
-                  >Shop It
-                </a></span
-              >
-              - <em> An app made to save time in grocery stores </em>
-              <br />
-              <div class="mb-0">
-                <br />
-                <span class="text-primary">Challenges & Features</span>
-                <div class="hidden-challenge-container">
-                  <p class="shown-challenge-text">Dealing with state</p>
-                  <p class="hidden-challenge-text">To Redux OR NOT to Redux</p>
-                </div>
-                <div class="hidden-challenge-container">
-                  <p class="shown-challenge-text">
-                    Updating state and refreshing components
-                  </p>
-                  <p class="hidden-challenge-text">
-                    Solved by re-calling database
-                  </p>
-                </div>
-                <span class="text-primary">Future Goals</span>
-                <p>Mapping the store</p>
-                <p>
-                  Incorporate sales and ads directed to customers as they pick
-                  up nearby items
-                </p>
-                <div class="pie-chart container">
-                  <div class="row">
-                    <div class="col">
-                      <span
-                        ><div class=" chart-pie pt-4 ">
-                          <canvas id="myPieChart2"></canvas></div
-                      ></span>
-                    </div>
-                    <div class="col">
-                      <div class="chart-legend">
-                        <div class="row">
-                          <div class="col">
-                            <p class="legend-heading">Legend</p>
-                            <p>Front-End</p>
-
-                            <div class="row">
-                              <div class="color-box-1 color-box"></div>
-                              <p class="legend-label">React-Bootstrap</p>
-                            </div>
-                            <div class="row">
-                              <div class="color-box-2 color-box"></div>
-                              <p class="legend-label">css</p>
-                            </div>
-                            <div class="row">
-                              <div class="color-box-3 color-box"></div>
-                              <p class="legend-label">React</p>
-                            </div>
-                            <p>Back-End</p>
-                            <div class="row">
-                              <div class="color-box-4 color-box"></div>
-                              <p class="legend-label">Django</p>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="page-section" id="card-games">
-      <div class="container">
-        <div class="product-item">
-          <div class="product-item-title d-flex">
-            <div class="bg-faded p-5 d-flex ml-auto rounded">
-              <h2 class="section-heading mb-0">
-                <span class="section-heading-upper">Card Games</span>
-                <span class="section-heading-lower landing-title ">
-                  <a
-                    href="https://github.com/jaybenaim/card_games"
-                    target="_blank"
-                  >
-                    Card Games</a
-                  ></span
-                >
-              </h2>
-            </div>
-          </div>
-          <div class="card-games-image-container">
-            <img
-              class="product-item-img card-games-image mx-auto d-flex rounded img-fluid mb-3 mb-lg-0"
-              src="../img/war.png"
-              alt="war snapshot"
-            />
-          </div>
-
-          <div
-            class="product-item-description card-games-description d-flex mr-auto"
-          >
-            <div class="bg-faded p-5 rounded">
-              <span class="section-heading-lower "> </span>
-              <span class="section-heading-upper landing-title"
-                ><a
-                  href="https://jaybenaim.github.io/card_games/"
-                  target="_blank"
-                >
-                  Card Games</a
-                ></span
-              >
-              - <em> A collection of card games </em>
-              <br />
-              <div class="mb-0">
-                <br />
-                <span class="text-primary">Challenges & Features</span>
-
-                <div class="hidden-challenge-container">
-                  <p class="shown-challenge-text">React drag and drop</p>
-                  <p class="hidden-challenge-text">
-                    Learning a new package and its inner workings. Component vs
-                    Iframe drag and drop.
-                  </p>
-                </div>
-
-                <div class="hidden-challenge-container">
-                  <p class="shown-challenge-text">Class Object vs API</p>
-                  <p class="hidden-challenge-text">
-                    Creating the deck manually vs. using an API. Creating the
-                    deck allowed me to customize the deck for any game I added
-                    with minimum backend configuration.
-                  </p>
-                </div>
-
-                <div class="pie-chart container">
-                  <div class="row">
-                    <div class="col">
-                      <span
-                        ><div class=" chart-pie pt-4 ">
-                          <canvas id="myPieChart6"></canvas></div
-                      ></span>
-                    </div>
-                    <div class="col">
-                      <div class="chart-legend">
-                        <div class="row">
-                          <div class="col ">
-                            <p class="legend-heading">Legend</p>
-                            <p>Front-End</p>
-                            <div class="row">
-                              <div class="color-box-1 color-box"></div>
-                              <p class="legend-label">React.js</p>
-                            </div>
-                            <div class="row">
-                              <div class="color-box-2 color-box"></div>
-                              <p class="legend-label">JavaScript</p>
-                            </div>
-
-                            <p>Back-End</p>
-                            <div class="row">
-                              <div class="color-box-5 color-box"></div>
-                              <p class="legend-label">Django</p>
-                            </div>
-                            <div class="row">
-                              <div class="color-box-3 color-box"></div>
-                              <p class="legend-label">Python</p>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="page-section" id="community">
-      <div class="container">
-        <div class="product-item">
-          <div class="product-item-title d-flex ">
-            <div
-              class="bg-faded p-5 d-flex mr-auto rounded community-title-container"
-            >
-              <h2 class="section-heading mb-0">
-                <span class="section-heading-upper upper-heading"
-                  >React, Django</span
-                >
-                <span
-                  class=" landing-title section-heading-lower  community-header "
-                  ><a
-                    href="https://github.com/jaybenaim/community"
-                    target="_blank"
-                  >
-                    Community</a
-                  ></span
-                >
-              </h2>
-            </div>
-          </div>
-          <img
-            class="product-item-img mx-auto d-flex rounded img-fluid mb-3 mb-lg-0"
-            src="../img/community.JPG"
-            alt="community app home page snapshot"
-          />
-          <div class="product-item-description d-flex ml-auto">
-            <div class="bg-faded p-5 rounded">
-              <span class="section-heading-upper landing-title"
-                ><a
-                  href="https://github.com/jaybenaim/community"
-                  target="blank"
-                >
-                  Community</a
-                ></span
-              >
-              - <em> An app bringing neighbours together again </em>
-              <br />
-              <div class="mb-0">
-                <br />
-                <span class="text-primary">Challenges & Features</span>
-                <p>
-                  React & Django Communication
-                </p>
-                <p>Google Maps Api</p>
-                <p>jQuery slidshow and customised gallery</p>
-                <p>Adding custom chat system</p>
-                <p>Paired programming</p>
-                <div class="pie-chart container">
-                  <div class="row">
-                    <div class="col">
-                      <span
-                        ><div class=" chart-pie pt-4 ">
-                          <canvas id="myPieChart4"></canvas></div
-                      ></span>
-                    </div>
-                    <div class="col">
-                      <div class="chart-legend">
-                        <div class="row">
-                          <div class="col">
-                            <p class="legend-heading">Legend</p>
-                            <p>Front-End</p>
-                            <div class="row">
-                              <div class="color-box-1 color-box"></div>
-                              <p class="legend-label">React</p>
-                            </div>
-                            <div class="row">
-                              <div class="color-box-2 color-box"></div>
-                              <p class="legend-label">React-Bootstrap</p>
-                            </div>
-                            <div class="row">
-                              <div class="color-box-5 color-box"></div>
-                              <p class="legend-label">Jest</p>
-                            </div>
-
-                            <p>Back-End</p>
-                            <div class="row">
-                              <div class="color-box-3 color-box"></div>
-                              <p class="legend-label">Python</p>
-                            </div>
-                            <div class="row">
-                              <div class="color-box-4 color-box"></div>
-                              <p class="legend-label">Django</p>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="page-section" id="tic-tac-toe">
-      <div class="container">
-        <div class="product-item">
-          <div class="product-item-title d-flex">
-            <div
-              class="bg-faded p-5 d-flex mr-auto rounded tic-tac-toe-heading-container"
-            >
-              <h2 class="section-heading mb-0">
-                <span class="section-heading-upper upper-heading "
-                  >Tic-Tac-Toe</span
-                >
-                <span class="section-heading-lower text-primary "
-                  ><a
-                    href="https://jaybenaim.github.io/wdi-tic-tac-toe/"
-                    target="_blank"
-                  >
-                    Tic-Tac-Toe</a
-                  ></span
-                >
-              </h2>
-            </div>
-          </div>
-          <img
-            class="product-item-img mx-auto d-flex rounded img-fluid mb-3 mb-lg-0"
-            src="../img/tic-tac-toe.JPG"
-            alt="tic tac toe snapshot"
-          />
-          <div class="product-item-description d-flex ml-auto">
-            <div class="bg-faded p-5 rounded">
-              <span class="section-heading-upper landing-title"
-                ><a
-                  href="https://jaybenaim.github.io/wdi-tic-tac-toe/"
-                  target="blank"
-                >
-                  Tic-Tac-Toe</a
-                ></span
-              >
-              - <em> The classic game of Tic-Tac-Toe </em>
-              <br />
-              <div class="mb-0">
-                <br />
-                <span class="text-primary">Challenges & Features</span>
-                <p>
-                  Finding all possible combinations to calculate winner
-                </p>
-                <p>Calculating winner by other means</p>
-                <div class="pie-chart container">
-                  <div class="row">
-                    <div class="col">
-                      <span
-                        ><div class=" chart-pie pt-4 ">
-                          <canvas id="myPieChart3"></canvas></div
-                      ></span>
-                    </div>
-                    <div class="col">
-                      <div class="chart-legend">
-                        <div class="row">
-                          <div class="col">
-                            <p class="legend-heading">Legend</p>
-
-                            <div class="row">
-                              <div class="color-box-1 color-box"></div>
-                              <p class="legend-label">jQuery</p>
-                            </div>
-                            <div class="row">
-                              <div class="color-box-2 color-box"></div>
-                              <p class="legend-label">BootStrap</p>
-                            </div>
-                            <div class="row">
-                              <div class="color-box-3 color-box"></div>
-                              <p class="legend-label">HTML5</p>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="page-section" id="yelpcamp">
-      <div class="container">
-        <div class="product-item">
-          <div class="product-item-title d-flex">
-            <div class="bg-faded p-5 d-flex ml-auto rounded">
-              <h2 class="section-heading mb-0">
-                <span class="section-heading-upper"
-                  >First Full-Stack App<br />
-                  M.E.N. Stack
-                </span>
-                <span class="section-heading-lower landing-title ">
-                  <a
-                    href="https://github.com/jaybenaim/yelpCamp"
-                    target="_blank"
-                  >
-                    YelpCamp</a
-                  ></span
-                >
-              </h2>
-            </div>
-          </div>
-          <img
-            class="product-item-img mx-auto d-flex rounded img-fluid mb-3 mb-lg-0"
-            src="../img/yelpcamp.JPG"
-            alt="yelpcamp home page snapshot"
-          />
-          <div class="product-item-description d-flex mr-auto">
-            <div class="bg-faded p-5 rounded">
-              <span class="section-heading-lower "> </span>
-              <span class="section-heading-upper landing-title"
-                ><a
-                  href="https://github.com/jaybenaim/yelpCamp"
-                  target="_blank"
-                >
-                  YelpCamp</a
-                ></span
-              >
-              - <em> A campsite styled blog </em>
-              <br />
-              <div class="mb-0">
-                <br />
-                <span class="text-primary">Challenges & Features</span>
-
-                <p>First Full-Stack App</p>
-                <p>CRUD operations</p>
-                <p>HTML, CSS slideshow</p>
-                <p>MongoDB, non-relational database</p>
-                <div class="pie-chart container">
-                  <div class="row">
-                    <div class="col">
-                      <span
-                        ><div class=" chart-pie pt-4 ">
-                          <canvas id="myPieChart5"></canvas></div
-                      ></span>
-                    </div>
-                    <div class="col">
-                      <div class="chart-legend">
-                        <div class="row">
-                          <div class="col ">
-                            <p class="legend-heading">Legend</p>
-                            <p>Front-End</p>
-                            <div class="row">
-                              <div class="color-box-1 color-box"></div>
-                              <p class="legend-label">Node.js</p>
-                            </div>
-
-                            <p>Back-End</p>
-                            <div class="row">
-                              <div class="color-box-2 color-box"></div>
-                              <p class="legend-label">Express.js</p>
-                            </div>
-                            <div class="row">
-                              <div class="color-box-3 color-box"></div>
-                              <p class="legend-label">MongoDB</p>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
 
     <footer class="footer text-faded text-center py-5">
       <div class="container">
@@ -834,11 +336,6 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
     <script src="../js/projects.js"></script>
     <script src="../js/landing-donut-chart.js"></script>
-    <script src="../js/shop-donut-chart.js"></script>
-    <script src="../js/tic-tac-donut-chart.js"></script>
-    <script src="../js/community-donut-chart.js"></script>
-    <script src="../js/yelpcamp-donut-chart.js"></script>
-    <script src="../js/card-games-donut.js"></script>
-    <script src="../js/ecommerce-donut.js"></script>
+    <script src="../js/dolcenada-donut.js"></script>
   </body>
 </html>
