@@ -1,13 +1,13 @@
 const form = document.querySelector("form");
-const displayAlert = data => {
+const displayAlert = (data) => {
   const { name, email, message } = data;
 
   const messageConfirmed = `<div> <br /> Message sent.<br />  </div> <br /> <div>Message: <p> ${message} </p>  from ${name} - ${email}<br /> </div> `;
   $("form").prepend(messageConfirmed);
 };
 
-$(function() {
-  form.addEventListener("submit", function(e) {
+$(function () {
+  form.addEventListener("submit", function (e) {
     e.preventDefault();
     const formData = $(".email-form");
     const formattedFormData = validateForm(formData);
@@ -16,22 +16,19 @@ $(function() {
   });
 });
 async function postData(formattedFormData) {
-  const response = await fetch(
-    "https://jays-portfolio-backend.herokuapp.com/email",
-    {
-      method: "POST",
-      headers: {
-        Accept: "application/json",
-        "Content-Type": "application/json"
-      },
-      body: JSON.stringify(formattedFormData)
-    }
-  );
+  const response = await fetch("http://localhost:3000/api/email", {
+    method: "POST",
+    headers: {
+      Accept: "application/json",
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(formattedFormData),
+  });
   const data = await response.json();
   displayAlert(data);
 }
 
-const validateForm = form => {
+const validateForm = (form) => {
   const name = form.find("#name").val();
   const email = form.find("#email").val();
   const message = form.find("#message").val();

@@ -1,12 +1,11 @@
 /*!
- * Start Bootstrap - Business Casual v5.0.9 (https://startbootstrap.com/template-overviews/business-casual)
- * Copyright 2013-2019 Start Bootstrap
- * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-business-casual/blob/master/LICENSE)
+ * Start Bootstrap - Business Casual v5.0.9 (jacobbenaim.ca)
+ * Copyright 2013-2020 Jacob
+ * Licensed under MIT (https://github.com/BlackrockDigital/jacob-benaim-portfolio/blob/master/LICENSE)
  */
 
 body {
-  font-family: "Lora";
-  background-image: url("../img/coffee.JPG");
+  font-family: 'Lora';
   background-attachment: fixed;
   background-position: center;
   background-size: cover;
@@ -18,15 +17,13 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Raleway";
+  font-family: 'Raleway';
 }
 
 p {
   line-height: 1.75;
 }
-a:hover {
-  cursor: pointer;
-}
+
 .text-faded {
   color: rgba(255, 255, 255, 0.3);
 }
@@ -36,21 +33,19 @@ a:hover {
   margin-bottom: 5rem;
   text-transform: uppercase;
   line-height: 1;
-  font-family: "Raleway";
+  font-family: 'Raleway';
 }
 
 .site-heading .site-heading-upper {
-  font-size: 5rem;
-  font-weight: 500;
-  line-height: 4rem;
-  color: rgba(0, 0, 0, 0.4);
+  display: block;
+  font-size: 2rem;
+  font-weight: 800;
 }
 
 .site-heading .site-heading-lower {
-  display: block;
-  font-size: 2rem;
-  font-weight: 400;
-  color: #00adb7;
+  font-size: 5rem;
+  font-weight: 100;
+  line-height: 4rem;
 }
 
 .page-section {
@@ -79,12 +74,12 @@ a:hover {
 }
 
 #mainNav {
-  background-color: rgba(0, 0, 0, 0.65);
-  font-family: "Raleway";
+  background-color: rgba(47, 23, 15, 0.9);
+  font-family: 'Raleway';
 }
 
 #mainNav .navbar-brand {
-  color: #00adb7;
+  color: #e6a756;
 }
 
 #mainNav .navbar-nav .nav-item .nav-link {
@@ -93,42 +88,9 @@ a:hover {
 }
 
 #mainNav .navbar-nav .nav-item.active .nav-link {
-  color: #00adb7;
+  color: #e6a756;
 }
-/* About Me */
-.skills-section {
-  font-size: 0.3em;
-}
-.passion-span {
-  font-weight: 500 !important;
-  font-size: 0.9em !important;
-}
-/* CONTACT */
-.social-icons {
-  font-size: 1.6em;
-  margin-top: 20px;
-}
-.social-icons a {
-  color: #0085aa;
-}
-.address a:hover {
-  cursor: p pointer;
-}
-/* .top-about-content {
-  width: 70%;
-  margin-top: 40%;
-  z-index: 1;
-  top: 200px;
-} */
-/* .skills-header {
-  font-weight: 400 !important;
-  font-size: 1.6em !important;
-} */
 
-.learn-more a {
-  font-size: 1.4em;
-  letter-spacing: 1.2px;
-}
 @media (min-width: 992px) {
   #mainNav .navbar-nav .nav-item .nav-link {
     font-size: 0.9rem;
@@ -137,29 +99,7 @@ a:hover {
     color: rgba(255, 255, 255, 0.4);
   }
   #mainNav .navbar-nav .nav-item.active .nav-link:hover {
-    color: #00adb7;
-  }
-  .shop-it-title-container div {
-    margin-top: 63%;
-    margin-right: -10%;
-    z-index: 2 !important;
-  }
-  .personal-projects-container {
-    float: left;
-    margin: 3% 0 10% 20%;
-  }
-  .section-heading-upper {
-    /* font-size: 2em !important; */
-  }
-  .passion-span {
-    font-size: 1em !important;
-  }
-  .about-me-content {
-    font-size: 1.4em;
-    text-align: center;
-  }
-  .need-website {
-    font-size: 0.8em !important;
+    color: #e6a756;
   }
 }
 
@@ -204,7 +144,7 @@ a:hover {
 .cta {
   padding-top: 5rem;
   padding-bottom: 5rem;
-  background-color: rgba(0, 133, 170, 0.85);
+  background-color: rgba(230, 167, 86, 0.9);
 }
 
 .cta .cta-inner {
@@ -216,67 +156,15 @@ a:hover {
 
 .cta .cta-inner:before {
   border-radius: 0.5rem;
-  content: "";
+  content: '';
   position: absolute;
   top: -0.5rem;
   bottom: -0.5rem;
   left: -0.5rem;
   right: -0.5rem;
   border: 0.25rem solid rgba(255, 255, 255, 0.85);
-  z-index: -1;
-}
-.address a {
-  font-size: 1.5em;
-  color: #0085aa;
-}
-.email {
-  font-size: 1.2em;
-}
-.email:hover {
-  cursor: pointer;
-}
-small {
-  font-size: 1.2em;
-}
-.phone-number {
-  font-size: 1em;
-}
-.phone-number:hover {
-  cursor: pointer;
-}
-.link {
-  color: black !important;
-  font-size: 0.8em;
-}
-.landing-title {
-  font-size: 1.4em;
-  font-weight: 600;
-}
-.index-contact-container {
-  font-size: 1.2em;
-}
-#index-contact-heading {
-  margin-bottom: 2px !important;
-}
-a {
-  color: #0085aa;
 }
 
-.copyright {
-  float: left;
-  margin-left: -10% !important;
-}
-
-#footer-contact-container {
-  margin-left: 60%;
-}
-
-#footer-contact-heading {
-  float: right;
-}
-.footer-section {
-  margin-top: -10%;
-}
 @media (min-width: 992px) {
   .about-heading .about-heading-img {
     position: relative;
@@ -297,7 +185,7 @@ a {
   }
   .product-item .product-item-img {
     position: relative;
-    z-index: -1;
+    z-index: 0;
     max-width: 60vw;
   }
   .product-item .product-item-description {
@@ -314,7 +202,7 @@ a {
 
 .list-hours .list-hours-item {
   border-bottom: 1px solid rgba(230, 167, 86, 0.5);
-  padding-bottom: 0.25rem;
+  padding-bottom: .25rem;
   margin-bottom: 1rem;
   font-style: italic;
 }
@@ -329,118 +217,18 @@ a {
     width: 50%;
     font-size: 1.1rem;
   }
-  .github-contact-link {
-    font-family: Raleway;
-  }
-  /* .phone-number-hidden {
-    color: transparent;
-  } 
-  */
-  .phone-number-hidden:hover,
-  .call-btn {
-    cursor: pointer;
-  }
-  .freelance-title {
-    transition: ease-in;
-  }
 }
 
-@media (max-width: 450px) {
-  .body {
-    background: url(../img/coffee.JPG);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    opacity: 0.99;
-  }
-  .body:before {
-    content: "";
-    display: block;
-    position: fixed;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -10;
-    background: url(../img/coffee.JPG) no-repeat center center;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-  }
-  .html {
-    width: 100%;
-    overflow: hidden;
-  }
-  .copyright {
-    margin-left: 0 !important;
-    font-size: 1em;
-  }
-  .copyright-phone {
-    float: left;
-    margin-left: -150%;
-  }
-  .footer-email {
-    display: inline-block;
-  }
-  .footer .fa-envelope-open {
-    float: left;
-    margin-top: 2%;
-    margin-left: -8%;
-  }
-  .footer {
-    font-size: 0.8em !important;
-  }
-
-  img:hover {
-    cursor: pointer;
-  }
-  .address strong {
-    font-size: 4em;
-  }
-  .address a {
-    font-size: 4em;
-  }
-  .product-item-title {
-    padding: 1em !important;
-    margin: 0 0 10% 0 !important;
-    width: 100%;
-  }
-  .shop-it-title-container h2 {
-    font-size: 0.2em !important;
-  }
-  .community-title-container {
-    font-size: 0.1em !important;
-  }
-  .upper-heading {
-    /* font-size: 7em !important; */
-  }
-  .title {
-    font-size: 1.3em !important;
-  }
-  .text-align-center {
-    text-align: center;
-  }
-}
-/* .address {
-  display: flex;
-  justify-content: center;
-} */
-.hide {
-  display: none;
-}
 .address strong {
   font-size: 1.2rem;
 }
 
 .footer {
-  background-color: rgba(0, 0, 0, 0.65);
-  font-size: 1.2em;
+  background-color: rgba(47, 23, 15, 0.9);
 }
 
 .text-primary {
-  color: #00adb7 !important;
-  font-weight: 400 !important;
+  color: #e6a756 !important;
 }
 
 .bg-primary {
@@ -452,30 +240,15 @@ a {
 }
 
 .btn-primary {
-  background-color: #00adb7;
-  border-color: #00adb7;
+  background-color: #e6a756;
+  border-color: #e6a756;
 }
 
-.btn-primary:hover,
-.btn-primary:focus,
-.btn-primary:active {
-  background-color: #00cfc8;
-  border-color: #00cfc8;
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active {
+  background-color: #df902a;
+  border-color: #df902a;
 }
 
 .font-weight-light {
   font-weight: 100 !important;
-}
-.site-heading {
-  animation-name: fadeIn;
-  animation-duration: 4s;
-  animation-iteration-count: 1;
-}
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
 }
