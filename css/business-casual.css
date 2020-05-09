@@ -402,7 +402,7 @@ a {
   }
   .product-item-title {
     padding: 1em !important;
-    margin: 0 0 10% 0 !important;
+    margin: 0 0 -15% 0 !important;
     width: 100%;
   }
   .shop-it-title-container h2 {
