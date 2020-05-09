@@ -15,6 +15,7 @@ $(function () {
     postData(formattedFormData);
   });
 });
+
 async function postData(formattedFormData) {
   const response = await fetch(
     "https://jays-portfolio-backend.herokuapp.com/api/email",
