@@ -298,13 +298,12 @@ a {
   .product-item .product-item-img {
     position: relative;
     z-index: -1;
-    max-width: 60vw;
+    width: 88vw;
   }
-  .product-item .product-item-description {
-    position: relative;
-    z-index: 1;
-    margin-top: -3rem;
-    max-width: 50vw;
+  .product-item .product-item-description .bg-faded {
+    margin: 0 auto;
+    margin-top: 3rem;
+    width: 80vw;
   }
 }
 

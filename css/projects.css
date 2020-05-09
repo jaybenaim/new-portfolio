@@ -38,9 +38,6 @@
 .hidden-challenge-container:hover {
   cursor: pointer;
 }
-.tic-tac-toe-heading-container {
-  justify-content: flex-end;
-}
 
 @media (min-width: 451px) {
   .card-games-image-container {
