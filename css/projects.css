@@ -78,6 +78,9 @@
   .community-header {
     margin-left: -6%;
   }
+  .landing-title a {
+    font-size: 0.9em;
+  }
 }
 @media (min-width: 789px) {
   .e-commerce-image-container {
