@@ -1,3 +1,4 @@
+// get user info
 async function fetchUserInfo() {
   const response = await fetch(
     "https://jays-portfolio-backend.herokuapp.com/api/users",
@@ -8,6 +9,14 @@ async function fetchUserInfo() {
   const data = await response.json();
   showUserInfo(data);
 }
+showUserInfo = (data) => {
+  let userDetailsContainer = $("#user-details");
+  userDetailsContainer.append(
+    `<div class="col-12"><p>${data.name}</p><p>${data.public_repos} public repositories </p><a href="${data.html_url}">Take me to Github</a> </div>`
+  );
+};
+
+// get repos
 async function fetchRepos(filter) {
   const response = await fetch(
     "https://jays-portfolio-backend.herokuapp.com/api/repos",
@@ -16,15 +25,11 @@ async function fetchRepos(filter) {
     }
   );
   const data = await response.json();
+  console.log(data.length);
   showResults(data, filter);
 }
 
-showUserInfo = (data) => {
-  let userDetailsContainer = $("#user-details");
-  userDetailsContainer.append(
-    `<div class="col-12"><p>${data.name}</p><p>${data.public_repos} public repositories </p><a href="${data.html_url}">Take me to Github</a> </div>`
-  );
-};
+// create repo result elements
 showResults = (data, filter) => {
   let resultContainer = $("#repo__results");
   filter && clearRepos();
@@ -41,10 +46,7 @@ showResults = (data, filter) => {
     resultContainer.append(result);
   });
 };
-clearRepos = () => {
-  let resultContainer = $("#repo__results");
-  resultContainer.empty();
-};
+
 filterRepos = (repos, filter) => {
   if (filter === undefined) {
     filter = "all";
@@ -61,9 +63,9 @@ filterRepos = (repos, filter) => {
   return results[filter];
 };
 
-const setDataToJson = () => {
-  let repos = fetchRepos();
-  fs.writeFileSync("../data/phraseFreqs.json", JSON.stringify(output));
+clearRepos = () => {
+  let resultContainer = $("#repo__results");
+  resultContainer.empty();
 };
 
 $(function () {
