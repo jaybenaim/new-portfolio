@@ -10,7 +10,7 @@ async function fetchUserInfo() {
 }
 async function fetchRepos(filter) {
   const response = await fetch(
-    "https://api.github.com/users/jaybenaim/repos?per_page=100",
+    "https://api.github.com/users/jaybenaim/repos?per_page=200",
     {
       method: "GET",
       headers: {
