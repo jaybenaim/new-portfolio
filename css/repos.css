@@ -1,5 +1,6 @@
 #repo__results {
   margin-top: -43%;
+  padding: 0;
 }
 #repo__results li {
   margin-bottom: 4%;
@@ -11,4 +12,7 @@
 .repo-filters input {
   margin-bottom: 4%;
   margin-top: 4%;
+}
+.pagination-container {
+  width: 100%;
 }
