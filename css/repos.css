@@ -1,3 +1,14 @@
-.repo__results li {
-  list-style: none;
+#repo__results {
+  margin-top: -43%;
+}
+#repo__results li {
+  margin-bottom: 4%;
+}
+.repo-filters {
+  display: flex;
+  flex-direction: column;
+}
+.repo-filters input {
+  margin-bottom: 4%;
+  margin-top: 4%;
 }
