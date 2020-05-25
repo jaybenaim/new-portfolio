@@ -1,21 +1,18 @@
 async function fetchUserInfo() {
-  const response = await fetch("https://api.github.com/users/jaybenaim", {
-    method: "GET",
-    headers: {
-      Authorization: `token 7e6bbb35e1883354cb894de17cc2867dd7e335a3`,
-    },
-  });
+  const response = await fetch(
+    "https://jays-portfolio-backend.herokuapp.com/api/users",
+    {
+      method: "GET",
+    }
+  );
   const data = await response.json();
   showUserInfo(data);
 }
 async function fetchRepos(filter) {
   const response = await fetch(
-    "https://api.github.com/users/jaybenaim/repos?per_page=200",
+    "https://jays-portfolio-backend.herokuapp.com/api/repos",
     {
       method: "GET",
-      headers: {
-        Authorization: `token 7e6bbb35e1883354cb894de17cc2867dd7e335a3`,
-      },
     }
   );
   const data = await response.json();
@@ -62,6 +59,11 @@ filterRepos = (repos, filter) => {
   });
 
   return results[filter];
+};
+
+const setDataToJson = () => {
+  let repos = fetchRepos();
+  fs.writeFileSync("../data/phraseFreqs.json", JSON.stringify(output));
 };
 
 $(function () {
