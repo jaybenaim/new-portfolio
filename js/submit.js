@@ -15,6 +15,7 @@ $(function () {
     postData(formattedFormData);
   });
 });
+
 async function postData(formattedFormData) {
 <<<<<<< HEAD
   const response = await fetch("http://localhost:3000/api/email", {

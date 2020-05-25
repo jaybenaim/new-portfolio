@@ -1,5 +1,8 @@
-$(function() {
-  $(".email-btn").click(e => {
+$(function () {
+  jQuery.htmlPrefilter = function (html) {
+    return html;
+  };
+  $(".email-btn").click((e) => {
     e.preventDefault();
     sendEmailToGmail();
   });
@@ -9,16 +12,13 @@ $(function() {
   });
   $(".phone-number-hidden").hide();
   $(".phone-number").hover(
-    function() {
+    function () {
       $(".phone-number").hide();
       $(".phone-number-hidden").show();
       $(".phone-number-hidden").css("font-size", "1.6em");
     },
-    function() {
-      $(this)
-        .find("span")
-        .last()
-        .remove();
+    function () {
+      $(this).find("span").last().remove();
     }
   );
 });
