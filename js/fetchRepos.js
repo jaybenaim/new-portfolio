@@ -25,7 +25,7 @@ async function fetchRepos(filter) {
     }
   );
   const data = await response.json();
-  console.log(data.length);
+
   showResults(data, filter);
 }
 
@@ -55,14 +55,23 @@ filterRepos = (repos, filter) => {
     all: [...repos],
     bitmaker: [],
   };
-  repos.forEach((repo) => {
+
+  repos.forEach((repo, i) => {
+    repo.image = imageBuilder(filter);
     repo.name.includes("day") && results.bitmaker.push(repo);
     repo.name.includes("wdi") && results.bitmaker.push(repo);
   });
 
   return results[filter];
 };
+imageBuilder = (filter) => {
+  let images = {
+    all: "placeholder",
+    bitmaker: "school-image",
+  };
 
+  return images[filter];
+};
 clearRepos = () => {
   let resultContainer = $("#repo__results");
   resultContainer.empty();
