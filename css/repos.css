@@ -1,5 +1,5 @@
 #repo__results {
-  margin-top: -43%;
+  margin-top: -73%;
   padding: 0;
 }
 #repo__results li {
@@ -15,4 +15,18 @@
 }
 .pagination-container {
   width: 100%;
+  margin-top: -26%;
+}
+.pagination {
+  display: flex;
+  flex-direction: column;
+}
+.pagination .page-link {
+  min-width: 100%;
+  text-align: center;
+  border: 1px solid #00adb7;
+  background-color: rgba(255, 255, 255, 0.2);
+  margin-top: 20%;
+  border-radius: 20px;
+  color: #0085aa;
 }

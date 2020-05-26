@@ -17,15 +17,15 @@ showUserInfo = (data) => {
 };
 
 // get repos
-async function fetchRepos(filter) {
+async function fetchRepos(filter, startAt) {
+  startAt = !startAt ? 0 : Number(startAt) * 20;
   const response = await fetch(
-    "https://jays-portfolio-backend.herokuapp.com/api/repos",
+    `https://jays-portfolio-backend.herokuapp.com/api/repos?start_at=${startAt}`,
     {
       method: "GET",
     }
   );
   const data = await response.json();
-
   showResults(data, filter);
 }
 
@@ -33,7 +33,7 @@ async function fetchRepos(filter) {
 showResults = (data, filter) => {
   let resultContainer = $("#repo__results");
   filter && clearRepos();
-  let filteredRepos = filterRepos(data, filter);
+  let filteredRepos = filter ? filterRepos(data, filter) : data;
   let styles = `list-style:none`;
 
   filteredRepos.forEach((item) => {
@@ -81,7 +81,24 @@ $(function () {
   fetchUserInfo();
   fetchRepos();
 
+  // filter
   $(".repo-filter").click(function () {
     fetchRepos(this.name);
   });
+
+  // pagination
+  $(".select-page").click(function () {
+    let pageLink = $(this).find(".page-link");
+    let value = pageLink.attr("value");
+    clearRepos();
+    fetchRepos(null, value);
+    setCurrentPage(value);
+  });
 });
+const setCurrentPage = (pageLink) => {
+  let pageItem = $(".page-item");
+  let linkItem = $(`[value=${pageLink}]`);
+  let linkClass = pageItem.attr("class");
+  pageItem.removeClass("active");
+  linkItem.parent().addClass(`${linkClass} active`);
+};
