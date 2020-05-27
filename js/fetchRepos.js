@@ -94,16 +94,40 @@ clearRepos = () => {
   resultContainer.empty();
 };
 
-const setCurrentPage = (pageLink) => {
+const setCurrentPageClass = (pageLink) => {
+  if (pageLink === 0) {
+    pageLink = 1;
+  }
   let pageItem = $(".page-item");
   let linkItem = $(`[value=${pageLink}]`);
   let linkClass = pageItem.attr("class");
+
   pageItem.removeClass("active");
   linkItem.parent().addClass(`${linkClass} active`);
 };
 
+const getCurrentPage = () =>
+  $(".page-item.select-page.active").find(".page-link").attr("value");
+
+const prevPage = () => {
+  let currentPage = getCurrentPage();
+  currentPage = currentPage >= 1 ? Number(currentPage) - 1 : 0;
+
+  clearRepos();
+  fetchRepos("all", currentPage);
+  setCurrentPageClass(currentPage);
+};
+const nextPage = () => {
+  let currentPage = getCurrentPage();
+  currentPage = currentPage < 5 ? Number(currentPage) + 1 : 0;
+  clearRepos();
+  fetchRepos("all", currentPage);
+  setCurrentPageClass(currentPage);
+};
+
 // onload
 $(function () {
+  getCurrentPage();
   fetchUserInfo();
   fetchRepos("all", 0);
 
@@ -118,6 +142,13 @@ $(function () {
     let value = pageLink.attr("value");
     clearRepos();
     fetchRepos("all", value - 1);
-    setCurrentPage(value);
+    setCurrentPageClass(value);
+  });
+
+  $("#prev-btn").click(() => {
+    prevPage();
+  });
+  $("#next-btn").click(() => {
+    nextPage();
   });
 });
