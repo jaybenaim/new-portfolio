@@ -42,6 +42,8 @@ showResults = (data, filter) => {
   let styles = `list-style:none`;
 
   filteredRepos.forEach((repo) => {
+    repo.image = imageBuilder(filter, repo.name);
+
     let result = `<li style=${styles}><div class="card">
                   <div class="card-body">
                   <div class="card-image">
@@ -115,7 +117,7 @@ $(function () {
     let pageLink = $(this).find(".page-link");
     let value = pageLink.attr("value");
     clearRepos();
-    fetchRepos(null, value);
+    fetchRepos("all", value - 1);
     setCurrentPage(value);
   });
 });
