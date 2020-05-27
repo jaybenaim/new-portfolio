@@ -82,7 +82,7 @@ imageBuilder = (filter, name) => {
 
   let imageKeys = Object.keys(images);
   let image = imageKeys.filter((key) => {
-    return name.includes(key);
+    return name.toLowerCase().includes(key);
   });
   let key = image[0];
   let matchedImage = images[key];
@@ -94,35 +94,55 @@ clearRepos = () => {
   resultContainer.empty();
 };
 
-const setCurrentPageClass = (pageLink) => {
+const setCurrentPageClass = (pageLink, direction) => {
   if (pageLink === 0) {
     pageLink = 1;
   }
   let pageItem = $(".page-item");
   let linkItem = $(`[value=${pageLink}]`);
   let linkClass = pageItem.attr("class");
+  if (direction === "prev" && pageLink >= 5) {
+    let lastPage = $(`[value=${pageLink + 1}]`);
 
-  pageItem.removeClass("active");
-  linkItem.parent().addClass(`${linkClass} active`);
+    lastPage.replaceWith(
+      `<span class="page-link" value=${pageLink}>${pageLink}</span>`
+    );
+    lastPage.parent().addClass(`${linkClass} active`);
+  } else if (direction === "next" && pageLink > 5) {
+    let lastPage = $(`[value=${pageLink - 1}]`);
+
+    lastPage.replaceWith(
+      `<span class="page-link" value=${pageLink}>${pageLink}</span>`
+    );
+    lastPage.parent().addClass(`${linkClass} active`);
+  } else {
+    pageItem.removeClass("active");
+    linkItem.parent().addClass(`${linkClass} active`);
+  }
 };
 
-const getCurrentPage = () =>
-  $(".page-item.select-page.active").find(".page-link").attr("value");
+const getCurrentPage = () => {
+  return {
+    element: $(".page-item.select-page.active").find(".page-link"),
+    value: $(".page-item.select-page.active").find(".page-link").attr("value"),
+  };
+};
 
 const prevPage = () => {
-  let currentPage = getCurrentPage();
+  let currentPage = getCurrentPage().value;
   currentPage = currentPage >= 1 ? Number(currentPage) - 1 : 0;
 
   clearRepos();
   fetchRepos("all", currentPage);
-  setCurrentPageClass(currentPage);
+  setCurrentPageClass(currentPage, "prev");
 };
 const nextPage = () => {
-  let currentPage = getCurrentPage();
-  currentPage = currentPage < 5 ? Number(currentPage) + 1 : 0;
+  let currentPage = Number(getCurrentPage().value);
+  currentPage = currentPage < 10 ? Number(currentPage) + 1 : 0;
+
   clearRepos();
   fetchRepos("all", currentPage);
-  setCurrentPageClass(currentPage);
+  setCurrentPageClass(currentPage, "next");
 };
 
 // onload
