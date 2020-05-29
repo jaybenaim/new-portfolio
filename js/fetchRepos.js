@@ -102,19 +102,19 @@ const setCurrentPageClass = (pageLink, direction) => {
   let linkItem = $(`[value=${pageLink}]`);
   let linkClass = pageItem.attr("class");
   if (direction === "prev" && pageLink >= 5) {
-    let lastPage = $(`[value=${pageLink + 1}]`);
-
-    lastPage.replaceWith(
-      `<span class="page-link" value=${pageLink}>${pageLink}</span>`
-    );
-    lastPage.parent().addClass(`${linkClass} active`);
+    $(".page-link-item").each((index, el) => {
+      let value = Number($(el).text());
+      console.log(value);
+      $(el).attr("value", value - 1);
+      $(el).text(value - 1);
+    });
   } else if (direction === "next" && pageLink > 5) {
-    let lastPage = $(`[value=${pageLink - 1}]`);
-
-    lastPage.replaceWith(
-      `<span class="page-link" value=${pageLink}>${pageLink}</span>`
-    );
-    lastPage.parent().addClass(`${linkClass} active`);
+    $(".page-link-item").each((index, el) => {
+      let value = Number($(el).text());
+      console.log(value);
+      $(el).attr("value", value + 1);
+      $(el).text(value + 1);
+    });
   } else {
     pageItem.removeClass("active");
     linkItem.parent().addClass(`${linkClass} active`);
