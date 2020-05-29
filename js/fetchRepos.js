@@ -104,14 +104,12 @@ const setCurrentPageClass = (pageLink, direction) => {
   if (direction === "prev" && pageLink >= 5) {
     $(".page-link-item").each((index, el) => {
       let value = Number($(el).text());
-      console.log(value);
       $(el).attr("value", value - 1);
       $(el).text(value - 1);
     });
   } else if (direction === "next" && pageLink > 5) {
     $(".page-link-item").each((index, el) => {
       let value = Number($(el).text());
-      console.log(value);
       $(el).attr("value", value + 1);
       $(el).text(value + 1);
     });
