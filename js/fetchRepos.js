@@ -1,12 +1,41 @@
-const setLoading = (bool) => {
-  if (bool) {
-    $("#repo__results")
-      .append(`<div class="spinner-border text-info" role="status"><span class="sr-only">Loading...</span>
-</div>`);
-  } else {
-    $(".spinner").hide();
-  }
-};
+// onload
+$(function () {
+  getCurrentPage();
+  fetchUserInfo();
+  fetchRepos("all", 0);
+
+  // filter
+  $(".repo-filter").click(function () {
+    fetchRepos(this.name);
+  });
+
+  // pagination
+  $(".select-page").click(function () {
+    let pageLink = $(this).find(".page-link").text();
+    clearRepos();
+    fetchRepos("all", pageLink - 1);
+    setCurrentPageClass(pageLink);
+  });
+
+  $("#prev-btn").click(() => {
+    prevPage();
+  });
+  $("#next-btn").click(() => {
+    nextPage();
+  });
+  // hide on scroll
+  var prevScrollpos = window.pageYOffset;
+  window.onscroll = function () {
+    var currentScrollPos = window.pageYOffset;
+    if (prevScrollpos > currentScrollPos) {
+      $(".pagination").css("bottom", "5%");
+    } else {
+      $(".pagination").css("bottom", "-10%");
+    }
+    prevScrollpos = currentScrollPos;
+  };
+});
+
 // get repos
 async function fetchRepos(filter, startAt) {
   // set loading
@@ -71,41 +100,3 @@ const nextPage = () => {
   fetchRepos("all", currentPage);
   setCurrentPageClass(currentPage, "next");
 };
-
-// onload
-$(function () {
-  getCurrentPage();
-  fetchUserInfo();
-  fetchRepos("all", 0);
-
-  // filter
-  $(".repo-filter").click(function () {
-    fetchRepos(this.name);
-  });
-
-  // pagination
-  $(".select-page").click(function () {
-    let pageLink = $(this).find(".page-link").text();
-    clearRepos();
-    fetchRepos("all", pageLink - 1);
-    setCurrentPageClass(pageLink);
-  });
-
-  $("#prev-btn").click(() => {
-    prevPage();
-  });
-  $("#next-btn").click(() => {
-    nextPage();
-  });
-  // hide on scroll
-  var prevScrollpos = window.pageYOffset;
-  window.onscroll = function () {
-    var currentScrollPos = window.pageYOffset;
-    if (prevScrollpos > currentScrollPos) {
-      $(".pagination").css("bottom", "5%");
-    } else {
-      $(".pagination").css("bottom", "-10%");
-    }
-    prevScrollpos = currentScrollPos;
-  };
-});
