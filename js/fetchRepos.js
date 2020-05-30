@@ -12,7 +12,7 @@ async function fetchUserInfo() {
 showUserInfo = (data) => {
   let userDetailsContainer = $("#user-details");
   userDetailsContainer.append(
-    `<div class="col-3"><p>${data.name}</p><p>${data.public_repos} public repositories </p><a href="${data.html_url}">Take me to Github</a> </div>`
+    `<div class="col-sm-3 col-auto"><p>${data.name}</p><p>${data.public_repos} public repositories </p><a href="${data.html_url}">Take me to Github</a> </div>`
   );
 };
 
@@ -40,8 +40,8 @@ showResults = (data, filter) => {
 
   let filteredRepos = filter ? filterRepos(data, filter) : data;
   let styles = {
-    listItem: `list-style:none`,
-    refStyle: "height:40px;width:40px;position:absolute;z-index:9999;",
+    listItem: `list-style:none;max-width:81%;margin:0auto;`,
+    refStyle: "height:10px;width:10px;position:absolute;z-index:9999;",
   };
   filteredRepos.forEach((repo) => {
     repo.image = imageBuilder(filter, repo.name);
@@ -244,4 +244,15 @@ $(function () {
   $("#next-btn").click(() => {
     nextPage();
   });
+  // hide on scroll
+  var prevScrollpos = window.pageYOffset;
+  window.onscroll = function () {
+    var currentScrollPos = window.pageYOffset;
+    if (prevScrollpos > currentScrollPos) {
+      $(".pagination").css("bottom", "2%");
+    } else {
+      $(".pagination").css("bottom", "-10%");
+    }
+    prevScrollpos = currentScrollPos;
+  };
 });

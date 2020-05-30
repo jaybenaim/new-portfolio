@@ -1,6 +1,6 @@
 #repo__results {
-  margin-top: -49%;
-  margin-left: 5%;
+  margin-top: -15%;
+  margin-left: 16%;
   padding: 0;
 }
 #repo__results li {
@@ -14,23 +14,74 @@
   margin-bottom: 4%;
   margin-top: 4%;
 }
-.pagination-container {
-  width: 100%;
-  top: 42.5%;
+
+.left-side {
   position: fixed;
-  right: 5%;
-  padding-bottom: 20%;
+  z-index: -1;
+  width: 100%;
+  top: 52.5%;
 }
-.pagination {
-  display: flex;
-  flex-direction: column;
+@media (min-width: 451px) {
+  #repo__results {
+  }
+  .pagination-container {
+    width: 100%;
+    top: 51.5%;
+    position: fixed;
+    right: 5%;
+    padding-bottom: 20%;
+  }
+  .pagination {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    top: 1%;
+  }
+
+  .pagination .page-link {
+    min-width: 100%;
+    text-align: center;
+    border: 1px solid #00adb7;
+    background-color: rgba(255, 255, 255, 0.2);
+    margin-top: 5%;
+    border-radius: 20px;
+    color: #0085aa;
+  }
+  .left-side {
+    left: 5%;
+    margin-top: 1%;
+  }
 }
-.pagination .page-link {
-  min-width: 100%;
-  text-align: center;
-  border: 1px solid #00adb7;
-  background-color: rgba(255, 255, 255, 0.2);
-  margin-top: 5%;
-  border-radius: 20px;
-  color: #0085aa;
+@media (max-width: 450px) {
+  .left-side {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    top: 66px;
+    width: 70%;
+  }
+  #repo__results {
+    margin: 0 auto;
+    margin-top: 19%;
+    width: 100%;
+  }
+  .repo-filters {
+    margin-left: 97%;
+  }
+  .pagination {
+    display: flex;
+    flex-direction: row;
+    position: fixed;
+    bottom: 2%;
+    width: 92.5%;
+  }
+
+  .pagination .page-link {
+    min-width: 100%;
+    text-align: center;
+    margin-top: 5%;
+    color: #0085aa;
+    border-radius: 20px;
+    margin-left: 13px;
+  }
 }
