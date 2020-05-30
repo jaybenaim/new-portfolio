@@ -20,13 +20,31 @@ const showResults = (data, filter) => {
       repo.name
     } height='100%' width='100%'/> 
                   </div> 
-                  <div class="card-title"><a href='data.html_url'>${shortName(
-                    repo.name
-                  )}</a></div>
+                  <div class="card-title"><a href=${getLink(
+                    repo
+                  )} target="_blank" rel="noopener noreferrer">${shortName(
+      repo.name
+    )}</a></div>
                   </div></li>`;
     resultContainer.append(result);
   });
 };
 const shortName = (name) => {
   return name.length >= 8 ? name.slice(0, 8) + "..." : name;
+};
+const getLink = (repo) => {
+  let filterKeys = {
+    dolce: {
+      link: "https://dolcenada.ca",
+      alt: "dolcenada homepage",
+    },
+  };
+  let linkKeys = Object.keys(filterKeys);
+  let link = linkKeys.filter((key) => {
+    return repo.name.toLowerCase().includes(key);
+  });
+  let key = link[0];
+  let matchedLink = filterKeys[key];
+
+  return matchedLink ? matchedLink.link : repo.html_url;
 };
