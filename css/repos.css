@@ -1,6 +1,6 @@
 #repo__results {
-  margin-top: -15%;
-  margin-left: 16%;
+  margin-top: -5%;
+  margin-left: 2%;
   padding: 0;
 }
 #repo__results li {
@@ -22,8 +22,6 @@
   top: 52.5%;
 }
 @media (min-width: 451px) {
-  #repo__results {
-  }
   .pagination-container {
     width: 100%;
     top: 51.5%;

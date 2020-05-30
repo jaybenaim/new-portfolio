@@ -15,9 +15,19 @@ showUserInfo = (data) => {
     `<div class="col-sm-3 col-auto"><p>${data.name}</p><p>${data.public_repos} public repositories </p><a href="${data.html_url}">Take me to Github</a> </div>`
   );
 };
-
+setLoading = (bool) => {
+  if (bool) {
+    $("#repo__results")
+      .append(`<div class="spinner-border text-info" role="status"><span class="sr-only">Loading...</span>
+</div>`);
+  } else {
+    $(".spinner").hide();
+  }
+};
 // get repos
 async function fetchRepos(filter, startAt) {
+  // set loading
+  setLoading(true);
   startAt = !startAt ? 0 : Number(startAt) * 20;
   const response = await fetch(
     `https://jays-portfolio-backend.herokuapp.com/api/repos?start_at=${startAt}`,
@@ -37,6 +47,7 @@ async function fetchRepos(filter, startAt) {
 showResults = (data, filter) => {
   let resultContainer = $("#repo__results");
   filter && clearRepos();
+  setLoading(false);
 
   let filteredRepos = filter ? filterRepos(data, filter) : data;
   let styles = {
