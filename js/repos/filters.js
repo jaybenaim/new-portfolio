@@ -4,7 +4,20 @@ $(function () {
 });
 
 const toggleFilters = () => {
-  $(".repo-filter-trigger").click(() => {
-    $(".repo-filter").toggle();
+  let trigger = $(".repo-filter-trigger");
+  let filters = $(".repo-filter");
+  let activeFilterIcon = $("i").attr("class");
+
+  trigger.click(() => {
+    filters.toggle();
+    console.log(activeFilterIcon);
+
+    if (activeFilterIcon.includes("down")) {
+      $("i").replaceWith("<i class='fa fa-chevron-up'></i>");
+      activeFilterIcon = $("i").attr("class");
+    } else {
+      $("i").replaceWith("<i class='fa fa-chevron-down'></i>");
+      activeFilterIcon = $("i").attr("class");
+    }
   });
 };

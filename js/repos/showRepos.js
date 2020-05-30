@@ -16,10 +16,17 @@ const showResults = (data, filter) => {
                   <div class="card-body">
                   <div class="card-image">
                   <a href=${repo.image.ref} style=${styles.refStyle}></a>
-                  <img src=${repo.image.link} alt=${repo.name} height='100%' width='100%'/> 
+                  <img src=${repo.image.link} alt=${
+      repo.name
+    } height='100%' width='100%'/> 
                   </div> 
-                  <div class="card-title"><a href='data.html_url'>${repo.name}</a></div>
+                  <div class="card-title"><a href='data.html_url'>${shortName(
+                    repo.name
+                  )}</a></div>
                   </div></li>`;
     resultContainer.append(result);
   });
+};
+const shortName = (name) => {
+  return name.length >= 8 ? name.slice(0, 8) + "..." : name;
 };

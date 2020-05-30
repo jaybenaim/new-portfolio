@@ -12,6 +12,6 @@ async function fetchUserInfo() {
 const showUserInfo = (data) => {
   let userDetailsContainer = $("#user-details");
   userDetailsContainer.append(
-    `<div class="col-sm-3 col-auto"><p>${data.name}</p><p>${data.public_repos} public repositories </p><a href="${data.html_url}">Take me to Github</a> </div>`
+    `<div class="col-sm-12 col-auto"><p>${data.name}</p><p>${data.public_repos} public repositories </p><a href="${data.html_url}">Take me to Github</a> </div>`
   );
 };

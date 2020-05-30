@@ -18,10 +18,26 @@
 .left-side {
   position: fixed;
   z-index: 1;
-  width: 100%;
+  width: 30%;
   top: 52.5%;
 }
 @media (min-width: 451px) {
+  #repo__results {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+  #repo__results li {
+    min-height: 200px;
+    width: 170px;
+  }
+  #repo__results li img {
+    object-fit: contain;
+    max-height: 57px;
+  }
+  #repo__results li .card-title {
+    padding-bottom: 4%;
+  }
+
   .pagination-container {
     width: 100%;
     top: 51.5%;
