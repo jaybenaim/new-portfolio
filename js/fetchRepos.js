@@ -260,7 +260,7 @@ $(function () {
   window.onscroll = function () {
     var currentScrollPos = window.pageYOffset;
     if (prevScrollpos > currentScrollPos) {
-      $(".pagination").css("bottom", "2%");
+      $(".pagination").css("bottom", "5%");
     } else {
       $(".pagination").css("bottom", "-10%");
     }
