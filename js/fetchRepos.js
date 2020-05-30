@@ -39,16 +39,19 @@ showResults = (data, filter) => {
   filter && clearRepos();
 
   let filteredRepos = filter ? filterRepos(data, filter) : data;
-  let styles = `list-style:none`;
-
+  let styles = {
+    listItem: `list-style:none`,
+    refStyle: "height:40px;width:40px;position:absolute;z-index:9999;",
+  };
   filteredRepos.forEach((repo) => {
     repo.image = imageBuilder(filter, repo.name);
 
-    let result = `<li style=${styles}><div class="card">
+    let result = `<li style=${styles.listItem}><div class="card">
                   <div class="card-body">
                   <div class="card-image">
-                  <img src=${repo.image} alt=${repo.name} height='100%' width='100%'/> 
-                   </div> 
+                  <a href=${repo.image.ref} style=${styles.refStyle}></a>
+                  <img src=${repo.image.link} alt=${repo.name} height='100%' width='100%'/> 
+                  </div> 
                   <div class="card-title"><a href='data.html_url'>${repo.name}</a></div>
                   </div></li>`;
     resultContainer.append(result);
@@ -73,11 +76,78 @@ filterRepos = (repos, filter) => {
 };
 imageBuilder = (filter, name) => {
   let images = {
-    all: "../img/cafe.JPG",
-    bitmaker: "../img/about.jpg",
-    bit: "../img/about.jpg",
-    wdi: "../img/fire.JPG",
-    angular: "../img/about.jpg",
+    all: {
+      link: "../img/gradHat.png",
+      ref: "https://seeklogo.com/vector-logo/248724/graduation",
+    },
+    bitmaker: {
+      link: "../img/gradHat.png",
+      ref: "https://seeklogo.com/vector-logo/248724/graduation",
+    },
+    bit: {
+      link: "../img/gradHat.png",
+      ref: "https://seeklogo.com/vector-logo/248724/graduation",
+    },
+    wdi: {
+      link: "../img/gradHat.png",
+      ref: "https://seeklogo.com/vector-logo/248724/graduation",
+    },
+    angular: {
+      link: "../img/angular.png",
+      ref: "https://icons8.com/icons/set/angularjs",
+    },
+    tour: {
+      link: "../img/angular.png",
+      ref: "https://icons8.com/icons/set/angularjs",
+    },
+    react: {
+      link: "../img/react-logo.svg",
+      ref: "https://seeklogo.com/vector-logo/273845/react",
+    },
+    java: {
+      link: "../img/js-logo.svg",
+      ref: "https://seeklogo.com/vector-logo/273557/javascript-js",
+    },
+    game: {
+      link: "../img/games.jpg",
+      ref: "http://clipart-library.com/clipart/6376.htm",
+    },
+    tic: {
+      link: "../img/games.jpg",
+      ref: "http://clipart-library.com/clipart/6376.htm",
+    },
+    python: {
+      link: "../img/python.svg",
+      ref: "https://seeklogo.com/vector-logo/273830/python",
+    },
+    django: {
+      link: "../img/python.svg",
+      ref: "https://seeklogo.com/vector-logo/273830/python",
+    },
+    free: {
+      link: "../img/fcc.png",
+      ref: "https://icons8.com/icons/set/free-code-camp",
+    },
+    boot: {
+      link: "../img/bootstrap.png",
+      rel: "https://icons8.com/icons/set/bootstrap",
+    },
+    shop: {
+      link: "../img/shopping-cart.png",
+      rel: "https://pixabay.com/vectors/shopping-cart-shopping-icon-1105049/",
+    },
+    sell: {
+      link: "../img/shopping-cart.png",
+      rel: "https://pixabay.com/vectors/shopping-cart-shopping-icon-1105049/",
+    },
+    dolce: {
+      link: "../img/shopping-cart.png",
+      rel: "https://pixabay.com/vectors/shopping-cart-shopping-icon-1105049/",
+    },
+    store: {
+      link: "../img/shopping-cart.png",
+      rel: "https://pixabay.com/vectors/shopping-cart-shopping-icon-1105049/",
+    },
   };
 
   let imageKeys = Object.keys(images);
@@ -113,6 +183,12 @@ const setCurrentPageClass = (pageLink, direction) => {
       $(el).attr("value", value + 1);
       $(el).text(value + 1);
     });
+  } else if (direction === "next" && pageLink <= 11) {
+    $(".page-link-item").each((index, el) => {
+      $(el).attr("value", index + 1);
+      $(el).text(index + 1);
+    });
+    $("[value='1']").addClass("active");
   } else {
     pageItem.removeClass("active");
     linkItem.parent().addClass(`${linkClass} active`);
@@ -156,11 +232,10 @@ $(function () {
 
   // pagination
   $(".select-page").click(function () {
-    let pageLink = $(this).find(".page-link");
-    let value = pageLink.attr("value");
+    let pageLink = $(this).find(".page-link").text();
     clearRepos();
-    fetchRepos("all", value - 1);
-    setCurrentPageClass(value);
+    fetchRepos("all", pageLink - 1);
+    setCurrentPageClass(pageLink);
   });
 
   $("#prev-btn").click(() => {
