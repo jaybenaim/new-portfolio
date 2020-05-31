@@ -5,14 +5,16 @@ $(function () {
   fetchRepos("all", 0);
 
   // filter
-  $(".repo-filter").click(function () {
-    if (this.name !== "all") {
-      findRepos(this.name);
-    } else {
+  $(".repo-filter-link").click(function () {
+    if (this.name === "all") {
       fetchRepos(this.name);
     }
-  });
 
+    findRepos(this.name);
+  });
+  $("[name='favourites']").click(() => {
+    findRepos("favourites");
+  });
   // pagination
   $(".select-page").click(function () {
     let pageLink = $(this).find(".page-link").text();
@@ -56,6 +58,7 @@ async function fetchRepos(filter, startAt) {
     repo.image = imageBuilder(filter, repo.name);
     return repo;
   });
+
   showResults(reposWithImages, filter);
 }
 
@@ -69,7 +72,7 @@ async function findRepos(filter) {
   }
 
   const response = await fetch(
-    `https://jays-portfolio-backend.herokuapp.com/api/repos/find/?filter=${filter}`,
+    `http://localhost:5000/api/repos/find/?filter=${filter}`,
     {
       method: "GET",
     }
@@ -77,8 +80,10 @@ async function findRepos(filter) {
   const data = await response.json();
   let reposWithImages = data.map((repo) => {
     repo.image = imageBuilder(filter, repo.name);
+
     return repo;
   });
+
   showResults(reposWithImages);
   return reposWithImages;
 }
@@ -89,6 +94,7 @@ const filterRepos = (repos, filter) => {
   }
   let results = {
     all: [...repos],
+    favourites: [],
     bitmaker: [],
     games: [],
   };
@@ -96,7 +102,7 @@ const filterRepos = (repos, filter) => {
   repos.forEach((repo, i) => {
     repo.name.includes("day") && results.bitmaker.push(repo);
     repo.name.includes("wdi") && results.bitmaker.push(repo);
-    repo.name.includes("games") && results.games.push(repo);
+    repo.name.includes("game") && results.games.push(repo);
   });
 
   return results[filter];

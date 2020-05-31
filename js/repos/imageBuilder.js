@@ -76,6 +76,21 @@ const imageBuilder = (filter, name) => {
       link: "../img/shopping-cart.png",
       rel: "https://pixabay.com/vectors/shopping-cart-shopping-icon-1105049/",
     },
+    job: {
+      link: "../img/api-img.png",
+      rel:
+        "https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=2126876",
+    },
+    backend: {
+      link: "../img/api-img.png",
+      rel:
+        "https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=2126876",
+    },
+    api: {
+      link: "../img/api-img.png",
+      rel:
+        "https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=2126876",
+    },
   };
 
   let imageKeys = Object.keys(images);

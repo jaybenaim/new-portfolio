@@ -56,6 +56,18 @@ const getLink = (repo) => {
     job: {
       link: "https://job-finder-web-scraper.herokuapp.com/",
     },
+    shop_it_django: {
+      link: "https://jaybenaim.github.io/shop_it_django/",
+    },
+    card_games: {
+      link: "https://jaybenaim.github.io/card_games/",
+    },
+    isell: {
+      link: "https://jaybenaim.github.io/isell/",
+    },
+    html5: {
+      link: "https://jaybenaim.github.io/html5Game/",
+    },
   };
   let linkKeys = Object.keys(filterKeys);
   let link = linkKeys.filter((key) => {
