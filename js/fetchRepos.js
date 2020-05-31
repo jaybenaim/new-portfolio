@@ -35,8 +35,16 @@ $(function () {
     var currentScrollPos = window.pageYOffset;
     if (prevScrollpos > currentScrollPos) {
       $(".pagination").css("bottom", "5%");
+      if (this.window.innerWidth >= 450) {
+        $(".left-side").css("margin-top", "10%");
+        $(".pagination").show();
+      }
     } else {
       $(".pagination").css("bottom", "-10%");
+      if (this.window.innerWidth >= 450) {
+        $(".left-side").css("margin-top", "-10%");
+        $(".pagination").hide();
+      }
     }
     prevScrollpos = currentScrollPos;
   };
@@ -72,7 +80,7 @@ async function findRepos(filter) {
   }
 
   const response = await fetch(
-    `http://localhost:5000/api/repos/find/?filter=${filter}`,
+    `https://jays-portfolio-backend.herokuapp.com/api/repos/find/?filter=${filter}`,
     {
       method: "GET",
     }

@@ -87,6 +87,12 @@
   .repo-filter {
     width: 200%;
   }
+  /* .repo-filter {
+    margin-left: 241%;
+  }
+  [name="all"] {
+    margin-top: -142% !important;
+  } */
 }
 @media (max-width: 450px) {
   .left-side {
