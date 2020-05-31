@@ -32,6 +32,10 @@ const imageBuilder = (filter, name) => {
       link: "../img/js-logo.svg",
       ref: "https://seeklogo.com/vector-logo/273557/javascript-js",
     },
+    yelp: {
+      link: "../img/js-logo.svg",
+      ref: "https://seeklogo.com/vector-logo/273557/javascript-js",
+    },
     game: {
       link: "../img/games.jpg",
       ref: "http://clipart-library.com/clipart/6376.htm",

@@ -6,8 +6,11 @@ $(function () {
 
   // filter
   $(".repo-filter").click(function () {
-    // fetchRepos(this.name);
-    findRepos(this.name);
+    if (this.name !== "all") {
+      findRepos(this.name);
+    } else {
+      fetchRepos(this.name);
+    }
   });
 
   // pagination

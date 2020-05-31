@@ -12,10 +12,10 @@ const toggleFilters = () => {
     filters.toggle();
 
     if (activeFilterIcon.includes("down")) {
-      $("i").replaceWith("<i class='fa fa-chevron-up'></i>");
+      $(".fa-chevron-down").replaceWith("<i class='fa fa-chevron-up'></i>");
       activeFilterIcon = $("i").attr("class");
     } else {
-      $("i").replaceWith("<i class='fa fa-chevron-down'></i>");
+      $(".fa-chevron-up").replaceWith("<i class='fa fa-chevron-down'></i>");
       activeFilterIcon = $("i").attr("class");
     }
   });
