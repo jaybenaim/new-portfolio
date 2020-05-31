@@ -6,6 +6,9 @@
 #repo__results li {
   margin-bottom: 4%;
 }
+#repo__results li .card-title {
+  text-transform: capitalize;
+}
 .repo-filters {
   display: flex;
   flex-direction: column;
@@ -38,10 +41,12 @@
   #repo__results li {
     min-height: 200px;
     width: 170px;
+    margin: 0 auto;
   }
   #repo__results li img {
     object-fit: contain;
-    max-height: 57px;
+    /* max-height: 57px; */
+    min-height: 96px;
   }
   #repo__results li .card-title {
     padding-bottom: 4%;
@@ -100,6 +105,7 @@
     margin: 0 auto;
     margin-bottom: 2%;
   }
+
   .repo-filter-trigger {
     margin-left: -41%;
     width: 109%;
