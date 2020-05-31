@@ -36,7 +36,9 @@ const getLink = (repo) => {
   let filterKeys = {
     dolce: {
       link: "https://dolcenada.ca",
-      alt: "dolcenada homepage",
+    },
+    job: {
+      link: "https://job-finder-web-scraper.herokuapp.com/",
     },
   };
   let linkKeys = Object.keys(filterKeys);

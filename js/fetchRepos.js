@@ -62,11 +62,13 @@ const filterRepos = (repos, filter) => {
   let results = {
     all: [...repos],
     bitmaker: [],
+    games: [],
   };
 
   repos.forEach((repo, i) => {
     repo.name.includes("day") && results.bitmaker.push(repo);
     repo.name.includes("wdi") && results.bitmaker.push(repo);
+    repo.name.includes("games") && results.games.push(repo);
   });
 
   return results[filter];

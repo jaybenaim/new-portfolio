@@ -10,7 +10,6 @@ const toggleFilters = () => {
 
   trigger.click(() => {
     filters.toggle();
-    console.log(activeFilterIcon);
 
     if (activeFilterIcon.includes("down")) {
       $("i").replaceWith("<i class='fa fa-chevron-up'></i>");
