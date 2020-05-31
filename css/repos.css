@@ -25,7 +25,7 @@
   position: fixed;
   z-index: 1;
   width: 30%;
-  top: 52.5%;
+  top: 38.5%;
 }
 @media (min-width: 451px) {
   section {
@@ -94,11 +94,25 @@
   #repo__results {
     margin: 0 auto;
     margin-top: 19%;
-    margin-left: 10%;
     width: 100%;
   }
+  #repo__results li {
+    margin: 0 auto;
+    margin-bottom: 2%;
+  }
+  .repo-filter-trigger {
+    margin-left: -41%;
+    width: 109%;
+  }
+
   .repo-filters {
     margin-left: 97%;
+  }
+
+  .repo-filter {
+    margin-left: -36%;
+    width: 100%;
+    background: #d0e0df;
   }
   .pagination {
     display: flex;

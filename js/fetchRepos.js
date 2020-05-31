@@ -6,7 +6,8 @@ $(function () {
 
   // filter
   $(".repo-filter").click(function () {
-    fetchRepos(this.name);
+    // fetchRepos(this.name);
+    findRepos(this.name);
   });
 
   // pagination
@@ -53,6 +54,30 @@ async function fetchRepos(filter, startAt) {
     return repo;
   });
   showResults(reposWithImages, filter);
+}
+
+// // get repos
+async function findRepos(filter) {
+  // set loading
+  setLoading(true);
+  clearRepos();
+  if (filter === "all" || !filter) {
+    filter = "";
+  }
+
+  const response = await fetch(
+    `https://jays-portfolio-backend.herokuapp.com/api/repos/find/?filter=${filter}`,
+    {
+      method: "GET",
+    }
+  );
+  const data = await response.json();
+  let reposWithImages = data.map((repo) => {
+    repo.image = imageBuilder(filter, repo.name);
+    return repo;
+  });
+  showResults(reposWithImages);
+  return reposWithImages;
 }
 
 const filterRepos = (repos, filter) => {

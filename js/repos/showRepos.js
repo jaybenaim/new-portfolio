@@ -1,20 +1,27 @@
 // create repo result elements
 const showResults = (data, filter) => {
+  if (!filter) {
+    filter = "all";
+  }
   let resultContainer = $("#repo__results");
-  filter && clearRepos();
-  setLoading(false);
-
-  let filteredRepos = filter ? filterRepos(data, filter) : data;
   let styles = {
     listItem: `list-style:none;max-width:81%;margin:0auto;`,
     refStyle: "height:10px;width:10px;position:absolute;z-index:9999;",
   };
-  filteredRepos.forEach((repo) => {
-    repo.image = imageBuilder(filter, repo.name);
 
+  // disable loader and clear results
+  setLoading(false);
+  filter && clearRepos();
+
+  // check if filter has been activated if not use default results
+  let repos = filter ? filterRepos(data, filter) : data;
+  // create element for each repo item
+  repos.forEach((repo) => {
+    repo.image = imageBuilder(filter, repo.name);
     let result = `<li style=${styles.listItem}><div class="card">
                   <div class="card-body">
                   <div class="card-image">
+                 
                   <a href=${repo.image.ref} style=${styles.refStyle}></a>
                   <img src=${repo.image.link} alt=${
       repo.name
@@ -29,9 +36,18 @@ const showResults = (data, filter) => {
     resultContainer.append(result);
   });
 };
+// Shorten name to size all cards equally
 const shortName = (name) => {
-  return name.length >= 8 ? name.slice(0, 8) + "..." : name;
+  let width = window.innerWidth;
+
+  if (name.length >= 8 && width >= 450) {
+    return name.slice(0, 8) + "...";
+  } else {
+    return name;
+  }
 };
+
+// generate link for deployed repos
 const getLink = (repo) => {
   let filterKeys = {
     dolce: {
