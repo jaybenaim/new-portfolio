@@ -1,8 +1,16 @@
+body {
+  background: #cadbdb;
+}
+.loader-gif {
+    margin-top: -76px;
+}
+}
 #repo__results {
   margin-top: -5%;
   margin-left: 2%;
   padding: 0;
 }
+
 #repo__results li {
   margin-bottom: 4%;
 }
@@ -87,12 +95,6 @@
   .repo-filter {
     width: 200%;
   }
-  /* .repo-filter {
-    margin-left: 241%;
-  }
-  [name="all"] {
-    margin-top: -142% !important;
-  } */
 }
 @media (max-width: 450px) {
   .left-side {
@@ -102,10 +104,16 @@
     top: 66px;
     width: 70%;
   }
+  .loader-gif { 
+     margin-top: 85px;
+    margin-left: -56px;
+  }
+
   #repo__results {
     margin: 0 auto;
     margin-top: 19%;
     width: 100%;
+    padding: 0; 
   }
   #repo__results li {
     margin: 0 auto;
@@ -116,7 +124,6 @@
     margin-left: -41%;
     width: 109%;
   }
-
   .repo-filters {
     margin-left: 97%;
   }

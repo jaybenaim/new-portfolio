@@ -1,8 +1,8 @@
 const setLoading = (bool) => {
   if (bool) {
-    $("#repo__results")
-      .append(`<div class="spinner-border text-info" role="status"><span class="sr-only">Loading...</span>
-</div>`);
+    $(".spinner")
+      .append(`<img src="../img/loader.gif" class="loader-gif" alt="gif of person passing paper to themselves"/>
+  `);
   } else {
     $(".spinner").hide();
   }
