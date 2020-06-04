@@ -13,7 +13,7 @@ const showUserInfo = (data) => {
   let userDetailsContainer = $("#user-details");
   userDetailsContainer.append(
     `
-    <p class="name">${data.name}</p>
+    <p class="name text-primary">${data.name}</p>
     <p class="repo-amount">${data.public_repos} public repositories </p>
     <a href="${data.html_url}" target="_blank" rel="noopener noreferrer">Take me to Github</a>
     `
