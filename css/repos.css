@@ -13,12 +13,14 @@ body {
 #user-details {
   margin: 0 auto;
   text-align: center;
+  text-transform: capitalize;
 }
 #user-details .name {
   font-size: 3em;
   font-weight: 600;
   margin-bottom: 0;
 }
+
 /* Results */
 #repo__results {
   display: grid;
