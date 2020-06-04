@@ -133,75 +133,76 @@
 
     <section class="page-section repos-heading">
       <div class="container-fluid">
-        <div class="left-side">
-          <div id="user-details"></div>
-          <div class="row">
-            <div class="col-sm-4 repo-filters">
-              <button class="btn btn-outline-primary repo-filter-trigger">
-                Filters<i class="fa fa-chevron-down"></i>
-              </button>
+        <div class="row">
+          <div class="left-side">
+            <div id="user-details"></div>
+            <div class="row">
+              <!-- Filters -->
+              <div class="col-sm-4 repo-filters">
+                <button class="btn btn-outline-primary repo-filter-trigger">
+                  Filters<i class="fa fa-chevron-down"></i>
+                </button>
 
-              <input
-                type="submit"
-                class="btn btn-outline-primary repo-filter repo-filter-link"
-                name="all"
-                value="All"
-              />
-              <input
-                type="submit"
-                class="btn btn-outline-primary repo-filter"
-                name="favourites"
-                value="Favourites"
-              />
-              <input
-                type="submit"
-                class="btn btn-outline-primary repo-filter repo-filter-link"
-                name="wdi"
-                value="Bitmaker"
-              />
-              <input
-                type="submit"
-                class="btn btn-outline-primary repo-filter repo-filter-link"
-                name="games"
-                value="Games"
-              />
-              <input
-                type="submit"
-                class="btn btn-outline-primary repo-filter repo-filter-link"
-                name="java"
-                value="JavaScript"
-              />
-              <input
-                type="submit"
-                class="btn btn-outline-primary repo-filter repo-filter-link"
-                name="react"
-                value="React"
-              />
-              <input
-                type="submit"
-                class="btn btn-outline-primary repo-filter repo-filter-link"
-                name="angular"
-                value="Angular"
-              />
-              <input
-                type="submit"
-                class="btn btn-outline-primary repo-filter repo-filter-link"
-                name="python"
-                value="Python"
-              />
-              <input
-                type="submit"
-                class="btn btn-outline-primary repo-filter repo-filter-link"
-                name="ruby"
-                value="Rails"
-              />
+                <input
+                  type="submit"
+                  class="btn btn-outline-primary repo-filter repo-filter-link"
+                  name="all"
+                  value="All"
+                />
+                <input
+                  type="submit"
+                  class="btn btn-outline-primary repo-filter"
+                  name="favourites"
+                  value="Favourites"
+                />
+                <input
+                  type="submit"
+                  class="btn btn-outline-primary repo-filter repo-filter-link"
+                  name="wdi"
+                  value="Bitmaker"
+                />
+                <input
+                  type="submit"
+                  class="btn btn-outline-primary repo-filter repo-filter-link"
+                  name="games"
+                  value="Games"
+                />
+                <input
+                  type="submit"
+                  class="btn btn-outline-primary repo-filter repo-filter-link"
+                  name="java"
+                  value="JavaScript"
+                />
+                <input
+                  type="submit"
+                  class="btn btn-outline-primary repo-filter repo-filter-link"
+                  name="react"
+                  value="React"
+                />
+                <input
+                  type="submit"
+                  class="btn btn-outline-primary repo-filter repo-filter-link"
+                  name="angular"
+                  value="Angular"
+                />
+                <input
+                  type="submit"
+                  class="btn btn-outline-primary repo-filter repo-filter-link"
+                  name="python"
+                  value="Python"
+                />
+                <input
+                  type="submit"
+                  class="btn btn-outline-primary repo-filter repo-filter-link"
+                  name="ruby"
+                  value="Rails"
+                />
+              </div>
             </div>
           </div>
         </div>
-
+        <!-- Results -->
         <div class="row">
-          <div class="col-sm-4 col-lg-3"></div>
-          <!-- results -->
           <div class="col-sm-5 col-12">
             <div class="spinner"></div>
             <ul id="repo__results"></ul>

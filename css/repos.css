@@ -1,22 +1,26 @@
 body {
   background: #cadbdb;
 }
+/* Loader */
 .loader-gif {
   margin-top: -76px;
 }
-
+/* User Info */
+#user-details {
+}
+/* Results */
 #repo__results {
   margin-top: -5%;
   margin-left: 2%;
   padding: 0;
 }
-
 #repo__results li {
   margin-bottom: 4%;
 }
 #repo__results li .card-title {
   text-transform: capitalize;
 }
+/* Filters */
 .repo-filters {
   display: flex;
   flex-direction: column;
@@ -32,11 +36,11 @@ body {
 .fa {
   margin-left: 10%;
 }
-.left-side {
-  position: fixed;
-  z-index: 1;
-  width: 30%;
-  top: 38.5%;
+@media (min-width: 789px) {
+  #repo__results {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
 }
 @media (min-width: 451px) {
   section {
@@ -44,7 +48,7 @@ body {
   }
   #repo__results {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
   }
   #repo__results li {
     min-height: 200px;
@@ -61,10 +65,10 @@ body {
   }
 
   .pagination-container {
-    width: 100%;
+    min-width: 2%;
     top: 51.5%;
     position: fixed;
-    right: 5%;
+    right: -1%;
     padding-bottom: 20%;
   }
   .pagination {
@@ -73,20 +77,23 @@ body {
     justify-content: center;
     top: 1%;
   }
-
   .pagination .page-link {
-    min-width: 100%;
     text-align: center;
     border: 1px solid #00adb7;
     background-color: rgba(255, 255, 255, 0.2);
     margin-top: 5%;
-    border-radius: 20px;
     color: #0085aa;
+
+    border-radius: 50%;
   }
-  .left-side {
-    left: 5%;
-    margin-top: 1%;
-    max-width: 20%;
+  .page-item:first-child .page-link,
+  .page-item:last-child .page-link {
+    margin: 6px auto;
+    border-radius: 50%;
+    max-width: 60px;
+  }
+  .pagination .select-page {
+    margin: 4px auto;
   }
   #user-details div {
     padding: 0;
@@ -97,13 +104,6 @@ body {
   }
 }
 @media (max-width: 450px) {
-  .left-side {
-    position: absolute;
-    display: flex;
-    flex-direction: row;
-    top: 66px;
-    width: 70%;
-  }
   .loader-gif {
     margin-top: 85px;
     margin-left: -56px;

@@ -36,13 +36,11 @@ $(function () {
     if (prevScrollpos > currentScrollPos) {
       $(".pagination").css("bottom", "5%");
       if (this.window.innerWidth >= 450) {
-        $(".left-side").css("margin-top", "10%");
         $(".pagination").show();
       }
     } else {
       $(".pagination").css("bottom", "-10%");
       if (this.window.innerWidth >= 450) {
-        $(".left-side").css("margin-top", "-10%");
         $(".pagination").hide();
       }
     }
