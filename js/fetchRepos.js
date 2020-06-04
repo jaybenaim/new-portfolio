@@ -8,9 +8,9 @@ $(function () {
   $(".repo-filter-link").click(function () {
     if (this.name === "all") {
       fetchRepos(this.name);
+    } else {
+      findRepos(this.name);
     }
-
-    findRepos(this.name);
   });
   $("[name='favourites']").click(() => {
     findRepos("favourites");
@@ -75,12 +75,13 @@ async function findRepos(filter) {
   // set loading
   setLoading(true);
   clearRepos();
+  $(".repo-filter").hide();
   if (filter === "all" || !filter) {
     filter = "";
   }
 
   const response = await fetch(
-    `https://jays-portfolio-backend.herokuapp.com/api/repos/find/?filter=${filter}`,
+    `http://localhost:5000/api/repos/find/?filter=${filter}`,
     {
       method: "GET",
     }
@@ -91,6 +92,7 @@ async function findRepos(filter) {
 
     return repo;
   });
+  $(".repo-filter").hide();
 
   showResults(reposWithImages);
   return reposWithImages;
@@ -102,16 +104,21 @@ const filterRepos = (repos, filter) => {
   }
   let results = {
     all: [...repos],
-    favourites: [],
     bitmaker: [],
     games: [],
+    rails: [],
   };
 
   repos.forEach((repo, i) => {
+    repo.name = repo.name.toLowerCase();
+
     repo.name.includes("day") && results.bitmaker.push(repo);
     repo.name.includes("wdi") && results.bitmaker.push(repo);
     repo.name.includes("game") && results.games.push(repo);
+    repo.name.includes("rail") && results.rails.push(repo);
+    repo.name.includes("ruby") && results.rails.push(repo);
   });
+  $(".repo-filter").hide();
 
   return results[filter];
 };

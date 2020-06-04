@@ -2,9 +2,9 @@ body {
   background: #cadbdb;
 }
 .loader-gif {
-    margin-top: -76px;
+  margin-top: -76px;
 }
-}
+
 #repo__results {
   margin-top: -5%;
   margin-left: 2%;
@@ -104,8 +104,8 @@ body {
     top: 66px;
     width: 70%;
   }
-  .loader-gif { 
-     margin-top: 85px;
+  .loader-gif {
+    margin-top: 85px;
     margin-left: -56px;
   }
 
@@ -113,7 +113,7 @@ body {
     margin: 0 auto;
     margin-top: 19%;
     width: 100%;
-    padding: 0; 
+    padding: 0;
   }
   #repo__results li {
     margin: 0 auto;
