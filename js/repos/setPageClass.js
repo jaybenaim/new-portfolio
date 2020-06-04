@@ -5,6 +5,7 @@ const setCurrentPageClass = (pageLink, direction) => {
   let pageItem = $(".page-item");
   let linkItem = $(`[value=${pageLink}]`);
   let linkClass = pageItem.attr("class");
+
   if (direction === "prev" && pageLink >= 5) {
     $(".page-link-item").each((index, el) => {
       let value = Number($(el).text());

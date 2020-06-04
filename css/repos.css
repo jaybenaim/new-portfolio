@@ -33,7 +33,7 @@ body {
 }
 #repo__results .card {
   min-width: 160px;
-  max-height: 217px;
+  min-height: 100%;
 }
 #repo__results .card-image {
   min-height: 120px;
@@ -71,9 +71,18 @@ body {
   }
 
   /* Filters */
-  .repo-filter-trigger,
+  .repo-filter-trigger {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
   .repo-filter {
-    width: 200%;
+    margin: 0 5px;
+    margin-top: 2%;
+    width: 100%;
+  }
+  .fa {
+    margin: auto 2%;
   }
   /* Results  */
   #repo__results {
@@ -95,14 +104,14 @@ body {
     min-width: 2%;
     top: 51.5%;
     position: fixed;
-    right: -1%;
+    right: 2%;
     padding-bottom: 20%;
   }
   .pagination {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    top: 1%;
+    bottom: 1%;
   }
   .pagination .page-link {
     text-align: center;
@@ -110,7 +119,6 @@ body {
     background-color: rgba(255, 255, 255, 0.2);
     margin-top: 5%;
     color: #0085aa;
-
     border-radius: 50%;
   }
   .page-item:first-child .page-link,
@@ -155,30 +163,42 @@ body {
     margin-top: 85px;
     margin-left: -56px;
   }
-
+  /* User Info */
+  #user-details .name {
+    margin-top: -15%;
+  }
+  /* Results */
   #repo__results {
     margin: 0 auto;
-    margin-top: 19%;
     width: 100%;
     padding: 0;
+    overflow-y: scroll;
   }
   #repo__results li {
     margin-bottom: 2%;
   }
-
+  /* Filters */
   .repo-filter-trigger {
-    margin-left: -41%;
-    width: 109%;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    margin-top: 20px;
+    width: 100%;
+  }
+  .fa {
+    margin: auto 4%;
   }
   .repo-filters {
-    margin-left: 97%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 2%;
+    margin-top: 2%;
   }
-
   .repo-filter {
-    margin-left: -36%;
     width: 100%;
     background: #d0e0df;
   }
+  /* Pagination */
   .pagination {
     display: flex;
     flex-direction: row;
@@ -192,6 +212,8 @@ body {
     margin-top: 5%;
     color: #0085aa;
     border-radius: 20px;
-    margin-left: 13px;
+  }
+  .pagination .select-page {
+    margin: 0 2.5%;
   }
 }

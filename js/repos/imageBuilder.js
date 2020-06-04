@@ -28,14 +28,7 @@ const imageBuilder = (filter, name, lang) => {
       link: "../img/react-logo.svg",
       ref: "https://seeklogo.com/vector-logo/273845/react",
     },
-    java: {
-      link: "../img/js-logo.svg",
-      ref: "https://seeklogo.com/vector-logo/273557/javascript-js",
-    },
-    javascript: {
-      link: "../img/js-logo.svg",
-      ref: "https://seeklogo.com/vector-logo/273557/javascript-js",
-    },
+
     yelp: {
       link: "../img/js-logo.svg",
       ref: "https://seeklogo.com/vector-logo/273557/javascript-js",
@@ -104,6 +97,14 @@ const imageBuilder = (filter, name, lang) => {
       link: "../img/ruby.png",
       rel:
         "https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=160777",
+    },
+    java: {
+      link: "../img/js-logo.svg",
+      ref: "https://seeklogo.com/vector-logo/273557/javascript-js",
+    },
+    javascript: {
+      link: "../img/js-logo.svg",
+      ref: "https://seeklogo.com/vector-logo/273557/javascript-js",
     },
   };
 

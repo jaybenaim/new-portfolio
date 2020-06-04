@@ -47,11 +47,12 @@ const showResults = (data, filter) => {
 const shortName = (name) => {
   let width = window.innerWidth;
 
-  if (name.length >= 8 && width >= 450) {
-    return name.slice(0, 8) + "...";
-  } else {
-    return name;
-  }
+  // if (name.length >= 8 && width >= 450) {
+  //   return name.slice(0, 8) + "...";
+  // } else {
+  //   return name;
+  // }
+  return name;
 };
 
 // generate link for deployed repos
