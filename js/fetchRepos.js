@@ -88,7 +88,7 @@ async function findRepos(filter) {
   );
   const data = await response.json();
   let reposWithImages = data.map((repo) => {
-    repo.image = imageBuilder(filter, repo.name);
+    repo.image = imageBuilder(filter, repo.name, repo.language);
 
     return repo;
   });

@@ -1,4 +1,4 @@
-const imageBuilder = (filter, name) => {
+const imageBuilder = (filter, name, lang) => {
   let images = {
     all: {
       link: "../img/gradHat.png",
@@ -29,6 +29,10 @@ const imageBuilder = (filter, name) => {
       ref: "https://seeklogo.com/vector-logo/273845/react",
     },
     java: {
+      link: "../img/js-logo.svg",
+      ref: "https://seeklogo.com/vector-logo/273557/javascript-js",
+    },
+    javascript: {
       link: "../img/js-logo.svg",
       ref: "https://seeklogo.com/vector-logo/273557/javascript-js",
     },
@@ -91,11 +95,22 @@ const imageBuilder = (filter, name) => {
       rel:
         "https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=2126876",
     },
+    ruby: {
+      link: "../img/ruby.png",
+      rel:
+        "https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=160777",
+    },
+    rails: {
+      link: "../img/ruby.png",
+      rel:
+        "https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=160777",
+    },
   };
 
   let imageKeys = Object.keys(images);
   let image = imageKeys.filter((key) => {
-    return name.toLowerCase().includes(key);
+    lang = lang && lang.toLowerCase();
+    return name.includes(key) || (lang && lang.includes(key) && key);
   });
   let key = image[0];
   let matchedImage = images[key];

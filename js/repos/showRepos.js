@@ -17,22 +17,29 @@ const showResults = (data, filter) => {
   let repos = filter ? filterRepos(data, filter) : data;
   // create element for each repo item
   repos.forEach((repo) => {
-    repo.image = imageBuilder(filter, repo.name);
-    let result = `<li style=${styles.listItem}><div class="card">
+    repo.image = imageBuilder(filter, repo.name, repo.language);
+    let language = repo.language ? repo.language : "";
+    let result = `
+            <li style=${styles.listItem}>
+              <div class="card">
                   <div class="card-body">
-                  <div class="card-image">
-                 
-                  <a href=${repo.image.ref} style=${styles.refStyle}></a>
-                  <img src=${repo.image.link} alt=${
-      repo.name
-    } height='100%' width='100%'/> 
-                  </div> 
-                  <div class="card-title"><a href=${getLink(
-                    repo
-                  )} target="_blank" rel="noopener noreferrer">${shortName(
-      repo.name
-    )}</a></div>
-                  </div></li>`;
+                    <div class="card-image">
+                      <a href=${repo.image.ref} style=${styles.refStyle}></a>
+                      <img src=${repo.image.link} 
+                      alt=${repo.name} height='100%' width='100%'/> 
+                    </div> 
+                    <div class="card-title">
+                      <a href=${getLink(
+                        repo
+                      )} target="_blank" rel="noopener noreferrer">
+                      ${shortName(repo.name)}
+                      </a>
+                      <p>
+                      ${language}
+                      </p>
+                    </div>
+               </div>
+            </li>`;
     resultContainer.append(result);
   });
 };
