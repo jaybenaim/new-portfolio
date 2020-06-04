@@ -5,7 +5,7 @@ const showResults = (data, filter) => {
   }
   let resultContainer = $("#repo__results");
   let styles = {
-    listItem: `list-style:none;max-width:81%;margin:0auto;`,
+    listItem: `list-style:none;`,
     refStyle: "height:10px;width:10px;position:absolute;z-index:9999;",
   };
 
