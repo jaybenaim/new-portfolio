@@ -68,59 +68,6 @@ async function fetchRepos(filter, startAt) {
   showResults(reposWithImages, filter);
 }
 
-// // get repos
-async function findRepos(filter) {
-  // set loading
-  setLoading(true);
-  clearRepos();
-  $(".repo-filter").hide();
-  if (filter === "all" || !filter) {
-    filter = "";
-  }
-
-  const response = await fetch(
-    `http://localhost:5000/api/repos/find/?filter=${filter}`,
-    {
-      method: "GET",
-    }
-  );
-  const data = await response.json();
-  let reposWithImages = data.map((repo) => {
-    repo.image = imageBuilder(filter, repo.name, repo.language);
-
-    return repo;
-  });
-  $(".repo-filter").hide();
-
-  showResults(reposWithImages);
-  return reposWithImages;
-}
-
-const filterRepos = (repos, filter) => {
-  if (filter === undefined) {
-    filter = "all";
-  }
-  let results = {
-    all: [...repos],
-    bitmaker: [],
-    games: [],
-    rails: [],
-  };
-
-  repos.forEach((repo, i) => {
-    repo.name = repo.name.toLowerCase();
-
-    repo.name.includes("day") && results.bitmaker.push(repo);
-    repo.name.includes("wdi") && results.bitmaker.push(repo);
-    repo.name.includes("game") && results.games.push(repo);
-    repo.name.includes("rail") && results.rails.push(repo);
-    repo.name.includes("ruby") && results.rails.push(repo);
-  });
-  $(".repo-filter").hide();
-
-  return results[filter];
-};
-
 const clearRepos = () => {
   let resultContainer = $("#repo__results");
   resultContainer.empty();

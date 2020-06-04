@@ -41,6 +41,7 @@ body {
 
 #repo__results li .card-title {
   text-transform: capitalize;
+  margin-top: 4px;
 }
 /* Filters */
 .repo-filters {
@@ -50,7 +51,7 @@ body {
   margin-bottom: 4%;
   margin-top: 4%;
 }
-/* icon  */
+
 .repo-filter-trigger {
   font-size: 1.2em;
   max-width: 50%;
@@ -64,6 +65,17 @@ body {
   section {
     min-height: 400px;
   }
+  /* User Details  */
+  #user-details div {
+    padding: 0;
+  }
+
+  /* Filters */
+  .repo-filter-trigger,
+  .repo-filter {
+    width: 200%;
+  }
+  /* Results  */
   #repo__results {
     grid-template-columns: 1fr 1fr 1fr;
   }
@@ -78,7 +90,7 @@ body {
   #repo__results li .card-title {
     padding-bottom: 4%;
   }
-
+  /* Pagination */
   .pagination-container {
     min-width: 2%;
     top: 51.5%;
@@ -110,18 +122,32 @@ body {
   .pagination .select-page {
     margin: 4px auto;
   }
-  #user-details div {
-    padding: 0;
-  }
-  .repo-filter-trigger,
-  .repo-filter {
-    width: 200%;
-  }
 }
 @media (min-width: 989px) {
+  /* User Info  */
+  #user-details .name {
+    margin-top: 8%;
+  }
+  /* Results */
   #repo__results {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
+    margin-top: -48px;
+  }
+  #repo__results li {
+    margin: 10px auto;
+  }
+  /* Pagination */
+  .pagination-container {
+    margin-top: 4%;
+  }
+  /* Filters */
+  .repo-filter-trigger {
+    display: flex;
+    justify-content: center;
+  }
+  .fa {
+    margin: auto 2%;
   }
 }
 @media (max-width: 450px) {
