@@ -29,7 +29,6 @@ $(function () {
   $("#next-btn").click(() => {
     nextPage();
   });
-  // hide on scroll
   var prevScrollpos = window.pageYOffset;
   window.onscroll = function () {
     var currentScrollPos = window.pageYOffset;
