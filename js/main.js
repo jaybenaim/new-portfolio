@@ -31,7 +31,13 @@ const sendEmailToGmail = () => {
   window.open(`mailto:benaimjacob@gmail.com?subject=${subject}&body=${body}`);
 };
 async function wakeupDb() {
-  await fetch(`https://jays-portfolio-backend.herokuapp.com/api/`)
+  let hackerHunterUrl = "https://job-finder-web-scraper.herokuapp.com/api";
+  let backendUrl = "https://jays-portfolio-backend.herokuapp.com/api/";
+
+  const hackerHunterPromise = fetch(hackerHunterUrl);
+  const backendPromise = fetch(backendUrl);
+
+  await Promise.all([hackerHunterPromise, backendPromise])
     .then((res) =>
       res ? console.log("Welcome") : console.log("Something went wrong")
     )

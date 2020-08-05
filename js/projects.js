@@ -8,3 +8,6 @@ $(".phone-number").hover(
     $(this).find("span").last().remove();
   }
 );
+$(function () {
+  wakeupDb();
+});
