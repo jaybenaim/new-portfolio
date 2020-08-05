@@ -23,9 +23,7 @@ body {
   font-size: 4rem !important;
   padding: 0 0 2% 0;
 }
-#projects .product-item-img:first-of-type {
-  margin-top: 20%;
-}
+
 .landing-title a {
   font-size: 2em;
   color: #00adb7 !important;
@@ -38,6 +36,9 @@ body {
 @media (min-width: 768px) {
   #navbarResponsive {
     display: flex !important;
+  }
+  #projects .product-item-img:first-of-type {
+    margin-top: 20%;
   }
 }
 
