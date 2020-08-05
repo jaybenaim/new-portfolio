@@ -297,7 +297,7 @@ a {
   }
   .product-item .product-item-img {
     position: relative;
-    z-index: -1;
+    z-index: 1;
     width: 88vw;
   }
   .product-item .product-item-description .bg-faded {
@@ -401,9 +401,9 @@ a {
     font-size: 4em;
   }
   .product-item-title {
-    padding: 1em !important;
     margin: 0 0 -6% 0 !important;
-    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
   }
   .shop-it-title-container h2 {
     font-size: 0.2em !important;

@@ -1,3 +1,36 @@
+body {
+  overflow-x: hidden;
+}
+.site-heading-upper {
+  font-size: 6.4rem !important;
+}
+.site-heading-lower {
+  font-size: 3rem !important;
+}
+.navbar-nav {
+  max-width: 100%;
+}
+.nav-item a {
+  font-size: 1.2em !important;
+}
+.heading-title {
+  margin-bottom: 5%;
+  position: absolute;
+  float: left;
+}
+.freelance-title {
+  font-size: 4rem !important;
+  padding: 0 0 2% 0;
+}
+#projects .product-item-img:first-of-type {
+  margin-top: 20%;
+}
+@media (min-width: 768px) {
+  #navbarResponsive {
+    display: flex !important;
+  }
+}
+
 #projects {
   font-family: "Lora";
   background-image: url("../img/coffee.JPG") !important;
@@ -54,6 +87,9 @@
   }
 }
 @media (max-width: 450px) {
+  #projects .product-item-img:first-of-type {
+    margin-top: 45%;
+  }
   .card-games-image-container {
     display: flex;
     justify-content: center;

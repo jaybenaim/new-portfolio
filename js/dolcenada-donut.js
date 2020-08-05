@@ -33,20 +33,20 @@ var ctx = document.getElementById("dolcenadaChart");
 var myPieChart = new Chart(ctx, {
   type: "doughnut",
   data: {
-    labels: ["React", "Material-UI", "Express.js", "Node.js", "MongoDB"],
+    labels: ["Material-UI", "React", "Express.js", "Node.js", "MongoDB"],
     datasets: [
       {
         data: [30, 20, 15, 15, 20],
         backgroundColor: [
-          "rgba(39, 165, 232, 0.8)",
           "rgba(117, 242, 126, 0.8)",
+          "rgba(39, 165, 232, 0.8)",
           "rgba(32, 232, 215, 0.8)",
           "rgba(0, 208, 182, 0.8)",
           "rgba(255, 166, 0, 0.8)",
         ],
         hoverBackgroundColor: [
-          "rgba(39, 165, 232, 1)",
           "rgba(117, 242, 126, 1)",
+          "rgba(39, 165, 232, 1)",
           "rgba(32, 232, 215, 1)",
           "rgba(0, 208, 182, 1)",
           "rgba(255, 166, 0, 1)",

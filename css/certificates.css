@@ -1,3 +1,13 @@
+body {
+  overflow-x: hidden;
+}
+.navabr-nav {
+  max-width: 100%;
+}
+.nav-item a {
+  font-size: 1em !important;
+}
+
 @media (max-width: 440px) {
   .certificates-body {
     background-position-y: -20%;

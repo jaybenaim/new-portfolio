@@ -45,257 +45,187 @@
 
     <link href="../css/pie-chart.css" rel="stylesheet" />
     <link href="../css/projects.css" rel="stylesheet" />
-  
-     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script></head>
 
-  <body id="projects">
-    <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-dark py-lg-4" id="mainNav">
-      <div class="container">
-        <a
-          class="navbar-brand text-uppercase text-expanded font-weight-bold d-lg-none"
-          href="/"
-          >Jacob Benaim</a
-        >
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-toggle="collapse"
-          data-target="#navbarResponsive"
-          aria-controls="navbarResponsive"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-          <ul class="navbar-nav mx-auto">
-            <li class="nav-item px-lg-4">
-              <a
-                class="nav-link text-uppercase text-expanded"
-                href="../index.html"
-                >Home
-                <span class="sr-only">(current)</span>
-              </a>
-            </li>
-            <li class="nav-item px-lg-4">
-              <a class="nav-link text-uppercase text-expanded" href="about.html"
-                >About</a
-              >
-            </li>
-            <li class="nav-item active px-lg-4">
-              <a
-                class="nav-link text-uppercase text-expanded"
-                href="projects.html"
-                >Projects</a
-              >
-            </li>
-              <li class="nav-item px-lg-4">
-              <a
-                class="nav-link text-uppercase text-expanded"
-                href="repos.html"
-                >Repos</a
-              >
-            </li>
-            <li class="nav-item px-lg-4">
-              <a
-                class="nav-link text-uppercase text-expanded"
-                href="contact.html"
-                >Contact</a
-              >
-            </li>
-            <li class="nav-item px-lg-4">
-              <a
-                class="nav-link text-uppercase text-expanded"
-                href="../img/Jacob-Benaim-Resume.pdf"
-                target="_blank"
-                >Resume</a
-              >
-            </li>
-            <li class="nav-item px-lg-4">
-              <a
-                class="nav-link text-uppercase text-expanded"
-                href="certificates.html"
-                >Certificates</a
-              >
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-    <h1 class="site-heading text-center text-white d-none d-lg-block">
-      <span class="site-heading-upper mb-3">Projects</span>
-      <span class="site-heading-lower text-primary">Jacob Benaim</span>
-    </h1>
-
-    <!-- Freelance Projects -->
-    <div class="product-item-title d-flex">
-      <div class="bg-faded p-5 d-flex ml-auto rounded category-heading">
-        <h2 class="section-heading mb-0">
-          <span
-            class="section-heading-lower text-primary title freelance-title text-align-center"
-            >Freelance Projects</span
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+    />
+  </head>
+  <body>
+    <main id="projects">
+      <h1 class="site-heading text-center text-white d-none d-lg-block p-5">
+        <span class="site-heading-upper mb-3">Projects</span>
+        <span class="site-heading-lower text-primary">Jacob Benaim</span>
+      </h1>
+      <!-- Navigation -->
+      <nav class="navbar navbar-expand-lg navbar-dark py-lg-4" id="mainNav">
+        <div class="container">
+          <a
+            class="navbar-brand text-uppercase text-expanded font-weight-bold d-lg-none"
+            href="/"
+            >Jacob Benaim</a
           >
-        </h2>
-      </div>
-    </div>
-    <section class="page-section" id="dolcenada">
-      <div class="container">
-        <div class="product-item">
-          <img
-            class="product-item-img mx-auto d-flex rounded img-fluid mb-3 mb-lg-0"
-            src="../img/dolcenada.png"
-            alt="dolcenada screenshot of home page that contains a navbar with  a checkout cart, a gallary tab, and registration. The main image of cookies takes up the remaining portion"
-          />
-
-          <div class="product-item-description d-flex mr-auto">
-            <div class="bg-faded p-5 rounded">
-              <span class="section-heading-upper landing-title">
-                <a href="https://dolcenada.ca/" target="blank">
-                  Dolce Nada
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarResponsive"
+            aria-controls="navbarResponsive"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav mx-auto">
+              <li class="nav-item px-lg-4">
+                <a
+                  class="nav-link text-uppercase text-expanded"
+                  href="../index.html"
+                  >Home
+                  <span class="sr-only">(current)</span>
                 </a>
-              </span>
-              <br />
-              <em>E-commerce site </em>
-              <div class="mb-0">
-                <br />
-                <span class="text-primary">Challenges & Features</span>
-                <div class="hidden-challenge-container">
-                  <p class="shown-challenge-text">
-                    Simplified components by using a global state management
-                    tool to help build.
-                     
-                  </p>
-                  <p class="hidden-challenge-text">
-                    Introducing Redux and Redux-thunk to for state management
-                  </p>
-                </div>
-                <div class="hidden-challenge-container">
-                  <p class="shown-challenge-text">
-                    Finding an API that was affordable, and effective.
-                  </p>
-                  <p class="hidden-challenge-text">
-                    Incorporated sendGrid API to send e-mail order forms to the
-                    client according to orders from users.
-                  </p>
-                </div>
-                <div class="hidden-challenge-container">
-                  <p class="shown-challenge-text">
-                    Utilized react hooks and functional components
-                  </p>
-                  <p class="hidden-challenge-text">
-                    First project to use only functional components, opposed to
-                    class components.
-                  </p>
-                </div>
-                <div class="hidden-challenge-container">
-                  <p class="shown-challenge-text">
-                    Features in progress
-                  </p>
-                  <div class="hidden-challenge-text">
-                    <ul>
-                      <li>Stripe, Paypal, additional payment methods</li>
-                      <li>
-                        Order by dozens incorporated into the cart actions
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-                <div class="pie-chart container">
-                  <div class="row">
-                    <div class="col">
-                      <span
-                        ><div class="chart-pie dolcenada">
-                          <canvas id="dolcenadaChart"></canvas></div
-                      ></span>
-                    </div>
-                    <div class="col">
-                      <div class="chart-legend">
-                        <p class="legend-heading">Legend</p>
-                        <div class="row">
-                          <div class="color-box-1 color-box"></div>
-                          <p class="legend-label">React</p>
-                        </div>
-                        <div class="row">
-                          <div class="color-box-2 color-box"></div>
-                          <p class="legend-label">
-                            Material-UI
-                          </p>
-                        </div>
-                        <div class="row">
-                          <div class="color-box-3 color-box"></div>
-                          <p class="legend-label">Express.js</p>
-                        </div>
-                        <div class="row">
-                          <div class="color-box-4 color-box"></div>
-                          <p class="legend-label">Node.js</p>
-                        </div>
-                        <div class="row">
-                          <div class="color-box-4 color-box"></div>
-                          <p class="legend-label">MongoDB</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+              </li>
+              <li class="nav-item px-lg-4">
+                <a
+                  class="nav-link text-uppercase text-expanded"
+                  href="about.html"
+                  >About</a
+                >
+              </li>
+              <li class="nav-item active px-lg-4">
+                <a
+                  class="nav-link text-uppercase text-expanded"
+                  href="projects.html"
+                  >Projects</a
+                >
+              </li>
+              <li class="nav-item px-lg-4">
+                <a
+                  class="nav-link text-uppercase text-expanded"
+                  href="repos.html"
+                  >Repos</a
+                >
+              </li>
+              <li class="nav-item px-lg-4">
+                <a
+                  class="nav-link text-uppercase text-expanded"
+                  href="contact.html"
+                  >Contact</a
+                >
+              </li>
+              <li class="nav-item px-lg-4">
+                <a
+                  class="nav-link text-uppercase text-expanded"
+                  href="../img/Jacob-Benaim-Resume.pdf"
+                  target="_blank"
+                  >Resume</a
+                >
+              </li>
+              <li class="nav-item px-lg-4">
+                <a
+                  class="nav-link text-uppercase text-expanded"
+                  href="certificates.html"
+                  >Certificates</a
+                >
+              </li>
+            </ul>
           </div>
         </div>
-      </div>
-    </section>
-    <section class="page-section" id="real-estate">
-      <div class="container">
-        <div class="product-item">
-          <img
-            class="product-item-img mx-auto d-flex rounded img-fluid mb-3 mb-lg-0"
-            src="../img/kinsale.JPG"
-            alt="real-estate landing page snapshot "
-          />
-
-          <div class="product-item-description d-flex mr-auto">
-            <div class="bg-faded p-5 rounded">
-              <span class="section-heading-upper landing-title">
-                <a href="https://kinsaleroad.ca/" target="blank">
-                  Real-Estate Landing Page</a
-                ></span
+      </nav>
+      <section class="page-section" id="dolcenada">
+        <div class="product-item-title d-flex heading-title">
+          <div class="bg-faded p-5 d-flex ml-auto rounded category-heading">
+            <h2 class="section-heading mb-0">
+              <span
+                class="section-heading-lower text-primary title freelance-title text-align-center"
+                >Freelance Projects</span
               >
-              <div class="mb-0">
-                <br />
+            </h2>
+          </div>
+        </div>
+        <div class="container first-container">
+          <div class="product-item-title d-flex">
+            <div class="product-item">
+              <img
+                class="product-item-img mx-auto d-flex rounded img-fluid mb-3 mb-lg-0"
+                src="../img/dolcenada.png"
+                alt="dolcenada screenshot of home page that contains a navbar with  a checkout cart, a gallary tab, and registration. The main image of cookies takes up the remaining portion"
+              />
 
-                <span class="text-primary">Challenges & Features</span>
-                <br />
-
-                <p>Google Analytics, &amp; Google Maps Api</p>
-                <p>
-                  jQuery slidshow and customised gallery
-                </p>
-                <div class="pie-chart container">
-                  <div class="row">
-                    <div class="col">
-                      <span
-                        ><div class="chart-pie pt-4">
-                          <canvas id="myPieChart"></canvas></div
-                      ></span>
+              <div class="product-item-description d-flex mr-auto">
+                <div class="bg-faded p-5 rounded">
+                  <span class="section-heading-upper landing-title">
+                    <a href="https://dolcenada.ca/" target="blank">
+                      Dolce Nada
+                    </a>
+                  </span>
+                  <br />
+                  <em>E-commerce site </em>
+                  <div class="mb-0">
+                    <br />
+                    <span class="text-primary">Challenges & Features</span>
+                    <div class="hidden-challenge-container">
+                      <p class="shown-challenge-text">
+                        Simplified components by using a global state management
+                        tool to help build.
+                      </p>
+                      <p class="hidden-challenge-text">
+                        Introducing Redux and Redux-thunk to for state
+                        management
+                      </p>
                     </div>
-                    <div class="col">
-                      <div class="chart-legend">
-                        <div class="row">
-                          <div class="col">
+                    <div class="hidden-challenge-container">
+                      <p class="shown-challenge-text">
+                        Finding an API that was affordable, and effective.
+                      </p>
+                      <p class="hidden-challenge-text">
+                        Incorporated sendGrid API to send e-mail order forms to
+                        the client according to orders from users.
+                      </p>
+                    </div>
+                    <div class="hidden-challenge-container">
+                      <p class="shown-challenge-text">
+                        Utilized react hooks and functional components
+                      </p>
+                      <p class="hidden-challenge-text">
+                        First project to use only functional components, opposed
+                        to class components.
+                      </p>
+                    </div>
+
+                    <div class="pie-chart container">
+                      <div class="row">
+                        <div class="col">
+                          <span
+                            ><div class="chart-pie dolcenada">
+                              <canvas id="dolcenadaChart"></canvas></div
+                          ></span>
+                        </div>
+                        <div class="col">
+                          <div class="chart-legend">
                             <p class="legend-heading">Legend</p>
                             <div class="row">
                               <div class="color-box-1 color-box"></div>
-                              <p class="legend-label">Bootstrap</p>
+                              <p class="legend-label">React</p>
                             </div>
                             <div class="row">
                               <div class="color-box-2 color-box"></div>
-                              <p class="legend-label">css</p>
+                              <p class="legend-label">
+                                Material-UI
+                              </p>
                             </div>
                             <div class="row">
                               <div class="color-box-3 color-box"></div>
-                              <p class="legend-label">JavaScript</p>
+                              <p class="legend-label">Express.js</p>
+                            </div>
+                            <div class="row">
+                              <div class="color-box-4 color-box"></div>
+                              <p class="legend-label">Node.js</p>
+                            </div>
+                            <div class="row">
+                              <div class="color-box-4 color-box"></div>
+                              <p class="legend-label">MongoDB</p>
                             </div>
                           </div>
                         </div>
@@ -307,11 +237,72 @@
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+      <section class="page-section" id="real-estate">
+        <div class="container">
+          <div class="product-item">
+            <img
+              class="product-item-img mx-auto d-flex rounded img-fluid mb-3 mb-lg-0"
+              src="../img/kinsale.JPG"
+              alt="real-estate landing page snapshot "
+            />
 
-  
-    </div>
+            <div class="product-item-description d-flex mr-auto">
+              <div class="bg-faded p-5 rounded">
+                <span class="section-heading-upper landing-title">
+                  <a href="https://kinsaleroad.ca/" target="blank">
+                    Real-Estate Landing Page</a
+                  ></span
+                >
+                <div class="mb-0">
+                  <br />
+
+                  <span class="text-primary">Challenges & Features</span>
+                  <br />
+
+                  <p>Google Analytics, &amp; Google Maps Api</p>
+                  <p>
+                    jQuery slidshow and customised gallery
+                  </p>
+                  <div class="pie-chart container">
+                    <div class="row">
+                      <div class="col">
+                        <span
+                          ><div class="chart-pie pt-4">
+                            <canvas id="myPieChart"></canvas></div
+                        ></span>
+                      </div>
+                      <div class="col">
+                        <div class="chart-legend">
+                          <div class="row">
+                            <div class="col">
+                              <p class="legend-heading">Legend</p>
+                              <div class="row">
+                                <div class="color-box-1 color-box"></div>
+                                <p class="legend-label">Bootstrap</p>
+                              </div>
+                              <div class="row">
+                                <div class="color-box-2 color-box"></div>
+                                <p class="legend-label">css</p>
+                              </div>
+                              <div class="row">
+                                <div class="color-box-3 color-box"></div>
+                                <p class="legend-label">JavaScript</p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- Freelance Projects -->
 
     <footer class="footer text-faded text-center py-5">
       <div class="container">
@@ -341,6 +332,10 @@
     <script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
     <script src="../js/projects.js"></script>
     <script src="../js/landing-donut-chart.js"></script>
     <script src="../js/dolcenada-donut.js"></script>

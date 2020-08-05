@@ -8,6 +8,7 @@
   font-weight: 700;
   color: black;
   font-size: 1.2em;
+  width: 50%;
 }
 .chartjs-render-monitor {
   max-width: 500px;
@@ -48,8 +49,6 @@
 }
 
 @media (max-width: 450px) {
-  .pie-chart {
-  }
   .bg-faded {
     width: 100%;
   }
@@ -61,6 +60,9 @@
     text-decoration: underline;
     margin-top: 20px;
   }
+}
+.pie-chart {
+  max-width: 100%;
 }
 /* body:before {
   content: "";

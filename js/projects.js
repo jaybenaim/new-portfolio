@@ -1,16 +1,3 @@
-$(function () {
-  const textContainer = $(".hidden-challenge-container");
-  const hiddenText = $(".hidden-challenge-text");
-
-  textContainer.hover(
-    function () {
-      $(this).find(hiddenText).show();
-    },
-    function () {
-      $(this).find(hiddenText).hide();
-    }
-  );
-});
 $(".phone-number").hover(
   function () {
     $(".phone-number").hide();

@@ -20,6 +20,8 @@ const toggleFilters = () => {
   });
 };
 const filterRepos = (repos, filter) => {
+  setLoading();
+
   if (filter === undefined) {
     filter = "all";
   }

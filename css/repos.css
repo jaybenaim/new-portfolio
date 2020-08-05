@@ -1,6 +1,15 @@
 body {
   background: #cadbdb;
 }
+.site-heading-upper {
+  font-size: 6.4rem !important;
+}
+.site-heading-lower {
+  font-size: 3rem !important;
+}
+.nav-item a {
+  font-size: 0.9em !important;
+}
 /* Loader */
 .spinner {
   display: flex;

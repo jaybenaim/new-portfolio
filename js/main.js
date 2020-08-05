@@ -2,6 +2,7 @@ $(function () {
   jQuery.htmlPrefilter = function (html) {
     return html;
   };
+  wakeupDb();
   $(".email-btn").click((e) => {
     e.preventDefault();
     sendEmailToGmail();
@@ -29,3 +30,10 @@ const sendEmailToGmail = () => {
 
   window.open(`mailto:benaimjacob@gmail.com?subject=${subject}&body=${body}`);
 };
+async function wakeupDb() {
+  await fetch(`https://jays-portfolio-backend.herokuapp.com/api/`)
+    .then((res) =>
+      res ? console.log("Welcome") : console.log("Something went wrong")
+    )
+    .catch((err) => console.log(err));
+}

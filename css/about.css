@@ -1,3 +1,19 @@
+body {
+  overflow-x: hidden;
+}
+.site-heading-upper {
+  font-size: 4rem !important;
+}
+.site-heading-lower {
+  font-size: 2rem !important;
+}
+.navbar-nav {
+  max-width: 100%;
+}
+
+.nav-item a {
+  font-size: 1em !important;
+}
 .image-container {
   display: flex;
   padding-bottom: 10%;
