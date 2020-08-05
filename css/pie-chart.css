@@ -24,19 +24,19 @@
   border: 1px solid black;
 }
 .color-box-1 {
-  background-color: #27a5e8;
+  background-color: rgba(0, 173, 183, 0.8);
 }
 .color-box-2 {
   background-color: #75f27e;
 }
 .color-box-3 {
-  background-color: #20e8d7;
+  background-color: rgba(32, 232, 215, 0.8);
 }
 .color-box-4 {
-  background-color: rgba(255, 166, 0, 0.8);
+  background-color: rgba(56, 92, 224, 0.8);
 }
 .color-box-5 {
-  background-color: rgba(0, 208, 182, 1);
+  background-color: rgba(39, 165, 232, 0.8);
 }
 
 .legend-label {

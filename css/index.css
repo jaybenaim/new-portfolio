@@ -1,3 +1,10 @@
+.navbar-nav {
+  max-width: 100%;
+}
+
+.nav-item a {
+  font-size: 1em !important;
+}
 .intro-text {
   animation-name: fadeIn;
   animation-duration: 4s;

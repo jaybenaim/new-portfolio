@@ -1,6 +1,7 @@
 body {
   overflow-x: hidden;
 }
+
 .site-heading-upper {
   font-size: 6.4rem !important;
 }
@@ -24,6 +25,15 @@ body {
 }
 #projects .product-item-img:first-of-type {
   margin-top: 20%;
+}
+.landing-title a {
+  font-size: 2em;
+  color: #00adb7 !important;
+}
+
+.text-primary {
+  font-family: "Raleway";
+  color: #00adb7 !important;
 }
 @media (min-width: 768px) {
   #navbarResponsive {

@@ -27,6 +27,9 @@ body {
   border-radius: 2%;
   margin-top: -5%;
 }
+.section-heading-lower-text {
+  font-size: 0.6em !important;
+}
 @media (max-width: 450px) {
   .about-me-content p {
     text-align: center;
@@ -43,6 +46,7 @@ body {
     flex-direction: row;
     margin-left: -6%;
   }
+
   /* Slick */
 
   .about-slider div {
