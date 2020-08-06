@@ -37,8 +37,11 @@ body {
   #navbarResponsive {
     display: flex !important;
   }
-  #projects .product-item-img:first-of-type {
-    margin-top: 20%;
+  .first-container .product-item-img:first-of-type {
+    margin-top: 25%;
+  }
+  #hackerHunter .product-item-img:first-of-type {
+    margin-top: 25%;
   }
 }
 

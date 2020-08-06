@@ -481,3 +481,48 @@ a {
 footer .social-icons .fa {
   color: #327ab7 !important;
 }
+@media (max-width: 480px) {
+  .back-to-top-btn {
+    position: fixed;
+    bottom: 2%;
+    right: 2%;
+    height: 8%;
+    width: 14%;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    background: rgba(39, 165, 232, 0.8) !important;
+    color: #fff;
+    font-size: 3em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 3%;
+  }
+}
+@media (min-width: 481px) {
+  .back-to-top-btn {
+    position: fixed;
+    bottom: 5%;
+    right: 2%;
+    height: 8%;
+    width: 6%;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    background: rgba(39, 165, 232, 0.8) !important;
+    color: #fff;
+    font-size: 3em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 1%;
+  }
+}
+.back-to-top-btn:hover,
+.back-to-top-btn:focus,
+.back-to-top-btn:active {
+  text-decoration: none !important;
+}
+.back-to-top-btn:focus,
+.back-to-top-btn:active {
+  color: #fff;
+}
