@@ -79,10 +79,6 @@ body {
   padding: 30px;
 }
 
-.hidden-challenge-container:hover {
-  cursor: pointer;
-}
-
 @media (min-width: 451px) {
   .card-games-image-container {
     background: url(../img/war-desktop.JPG);
