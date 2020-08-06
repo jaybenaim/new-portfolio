@@ -420,11 +420,11 @@ a {
   .text-align-center {
     text-align: center;
   }
+  #footer-contact-container {
+    margin-left: 40%;
+  }
 }
-/* .address {
-  display: flex;
-  justify-content: center;
-} */
+
 .hide {
   display: none;
 }
@@ -477,4 +477,7 @@ a {
   100% {
     opacity: 1;
   }
+}
+footer .social-icons .fa {
+  color: #327ab7 !important;
 }

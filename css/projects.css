@@ -94,8 +94,11 @@ body {
   }
 }
 @media (max-width: 450px) {
-  #projects .product-item-img:first-of-type {
-    margin-top: 45%;
+  .first-container .product-item-img:first-of-type {
+    margin-top: 55%;
+  }
+  #hackerHunter .product-item-img:first-of-type {
+    margin-top: 65%;
   }
   .card-games-image-container {
     display: flex;
@@ -123,6 +126,12 @@ body {
   }
   .landing-title a {
     font-size: 0.9em;
+  }
+  .chart-legend {
+    width: 100%;
+  }
+  .legend-heading {
+    margin: 14% 0 7% 0 !important;
   }
 }
 @media (min-width: 789px) {
