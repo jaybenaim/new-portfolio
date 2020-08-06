@@ -9,6 +9,7 @@ var elementsToShow = document.querySelectorAll(".show-on-scroll");
 
 function loop() {
   elementsToShow.forEach(function (element) {
+    console.log(element);
     if (isElementInViewport(element)) {
       element.classList.add("is-visible");
     } else {
@@ -20,8 +21,10 @@ function loop() {
 }
 
 // Call the loop for the first time
-loop();
-
+// loop();
+$(function () {
+  //   loop();
+});
 // Helper function from: http://stackoverflow.com/a/7557433/274826
 function isElementInViewport(el) {
   // special bonus for those using jQuery
