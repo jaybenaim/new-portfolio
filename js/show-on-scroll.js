@@ -1,30 +1,36 @@
 // Detect request animation frame
-var scroll =
-  window.requestAnimationFrame ||
-  // IE Fallback
-  function (callback) {
-    window.setTimeout(callback, 1000 / 60);
-  };
-var elementsToShow = document.querySelectorAll(".show-on-scroll");
-
-function loop() {
-  elementsToShow.forEach(function (element) {
-    console.log(element);
-    if (isElementInViewport(element)) {
-      element.classList.add("is-visible");
-    } else {
-      element.classList.remove("is-visible");
-    }
-  });
-
-  scroll(loop);
-}
-
-// Call the loop for the first time
-// loop();
 $(function () {
-  //   loop();
+  const scroll =
+    window.requestAnimationFrame ||
+    // IE Fallback
+    function (callback) {
+      window.setTimeout(callback, 1000 / 60);
+    };
+  //  run the animation once on load
+  for (let i = 0; i < 2; i++) {
+    scroll(loop);
+  }
+  // run the animation without an infinate loop
+  window.addEventListener("scroll", loop);
 });
+
+const loop = () => {
+  var elementsToShow = document.querySelectorAll(".show-on-scroll");
+
+  if (window.innerHeight + window.pageYOffset <= document.body.offsetHeight) {
+    elementsToShow.forEach(function (element) {
+      if (isElementInViewport(element)) {
+        element.classList.add("is-visible");
+        console.log("sdsd");
+      } else {
+        element.classList.remove("is-visible");
+      }
+    });
+  }
+  //   to run as an infinite loop remove scroll event and uncomment next line
+  //   scroll(loop);
+};
+
 // Helper function from: http://stackoverflow.com/a/7557433/274826
 function isElementInViewport(el) {
   // special bonus for those using jQuery
