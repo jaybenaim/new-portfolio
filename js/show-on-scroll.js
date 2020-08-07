@@ -11,6 +11,7 @@ $(function () {
   for (let i = 0; i < 2; i++) {
     scroll(loop);
   }
+
   // run the animation without an infinate loop
   window.addEventListener("scroll", loop);
 });
@@ -38,8 +39,10 @@ function isElementInViewport(el) {
     el = el[0];
   }
   var rect = el.getBoundingClientRect();
+
+  // solved glitch bug with rect.bottom >= 100
   return (
-    (rect.top <= 0 && rect.bottom >= 0) ||
+    (rect.bottom >= 100 && rect.top <= 0 && rect.bottom >= 0) ||
     (rect.bottom >=
       (window.innerHeight || document.documentElement.clientHeight) &&
       rect.top <=

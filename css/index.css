@@ -44,3 +44,8 @@
 .fa:hover {
   text-decoration: none;
 }
+@media (max-width: 480px) {
+  .intro-img {
+    margin-top: 5%;
+  }
+}
