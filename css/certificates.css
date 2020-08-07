@@ -9,9 +9,6 @@ body {
 }
 
 @media (max-width: 440px) {
-  .certificates-body {
-    background-position-y: -20%;
-  }
   .certificate-grid-container {
     display: grid;
     grid-template-columns: 1fr 1fr;

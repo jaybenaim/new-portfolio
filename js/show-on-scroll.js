@@ -1,11 +1,12 @@
+const scroll =
+  window.requestAnimationFrame ||
+  // IE Fallback
+  function (callback) {
+    window.setTimeout(callback, 1000 / 60);
+  };
+
 // Detect request animation frame
 $(function () {
-  const scroll =
-    window.requestAnimationFrame ||
-    // IE Fallback
-    function (callback) {
-      window.setTimeout(callback, 1000 / 60);
-    };
   //  run the animation once on load
   for (let i = 0; i < 2; i++) {
     scroll(loop);
@@ -21,14 +22,13 @@ const loop = () => {
     elementsToShow.forEach(function (element) {
       if (isElementInViewport(element)) {
         element.classList.add("is-visible");
-        console.log("sdsd");
       } else {
         element.classList.remove("is-visible");
       }
     });
   }
   //   to run as an infinite loop remove scroll event and uncomment next line
-  //   scroll(loop);
+  // scroll(loop);
 };
 
 // Helper function from: http://stackoverflow.com/a/7557433/274826
