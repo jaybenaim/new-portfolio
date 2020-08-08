@@ -48,4 +48,21 @@
   .intro-img {
     margin-top: 5%;
   }
+  .fish-loader {
+    max-height: 71px;
+    width: 200px;
+    position: absolute;
+    margin-top: -14%;
+    left: 79px;
+  }
+}
+
+@media (min-width: 481px) {
+  .fish-loader {
+    max-height: 100px;
+    width: 300px;
+    position: absolute;
+    margin-top: -6%;
+    left: 2%;
+  }
 }

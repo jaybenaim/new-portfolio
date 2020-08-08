@@ -376,10 +376,7 @@ a {
     margin-left: 0 !important;
     font-size: 1em;
   }
-  .copyright-phone {
-    float: left;
-    margin-left: -150%;
-  }
+
   .footer-email {
     display: inline-block;
   }
@@ -422,7 +419,8 @@ a {
     text-align: center;
   }
   #footer-contact-container {
-    margin-left: 40%;
+    max-width: 50%;
+    display: block;
   }
 }
 
