@@ -108,7 +108,8 @@ body {
     border-radius: 50%;
     display: inline-block;
     margin-left: 5%;
-    height: 0.98rem;
+    height: 15px;
+    width: 15px;
   }
 
   .slick-dots li button {
