@@ -110,6 +110,10 @@ body {
     margin-left: 5%;
     height: 0.98rem;
   }
+
+  .slick-dots li button {
+    border: none !important;
+  }
   .about-slide {
     background: transparent !important;
   }
