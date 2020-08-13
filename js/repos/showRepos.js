@@ -53,7 +53,7 @@ const fixDescription = (description) => {
 };
 // Shorten name to size all cards equally
 const shortName = (name) => {
-  let regex = /[-_+1-9]/gi;
+  let regex = /[-_+0-9]/gi;
   let splitName = name.replace(regex, " ");
   return splitName;
 };
