@@ -1,13 +1,14 @@
 // create repo result elements
 const showResults = (data, filter) => {
-  if (!filter) {
-    filter = "all";
-  }
   let resultContainer = $("#repo__results");
   let styles = {
     listItem: `list-style:none;`,
     refStyle: "height:10px;width:10px;position:absolute;z-index:9999;",
   };
+
+  if (!filter) {
+    filter = "all";
+  }
 
   // disable loader and clear results
   setLoading(false);

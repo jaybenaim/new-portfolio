@@ -2,19 +2,22 @@
 $(function () {
   getCurrentPage();
   fetchUserInfo();
+  // fetch repos start at page 0
   fetchRepos("all", 0);
 
   // filter
   $(".repo-filter-link").click(function () {
+    let paginationContainer = $(".pagination-container");
+
     if (this.name === "all") {
       fetchRepos(this.name);
+      paginationContainer.show();
     } else {
       findRepos(this.name);
+      paginationContainer.hide();
     }
   });
-  $("[name='favourites']").click(() => {
-    findRepos("favourites");
-  });
+
   // pagination
   $(".select-page").click(function () {
     let pageLink = $(this).find(".page-link").text();
