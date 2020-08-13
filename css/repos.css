@@ -200,9 +200,15 @@ body {
     margin-bottom: 2%;
     overflow-y: hidden;
   }
+
   #repo__results li img {
     height: 200px;
     object-fit: contain;
+  }
+  #repo__results li .card-title {
+    margin-top: 6%;
+    font-size: 1.6em;
+    margin-bottom: 0;
   }
   /* Filters */
   .repo-filter-trigger {
