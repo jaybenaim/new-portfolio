@@ -423,6 +423,7 @@ a {
   #footer-contact-container {
     max-width: 50%;
     display: block;
+    margin-bottom: -5%;
   }
 }
 

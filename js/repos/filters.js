@@ -7,7 +7,7 @@ const toggleFilters = () => {
   let trigger = $(".repo-filter-trigger");
   let filters = $(".repo-filter");
   let activeFilterIcon = $("i").attr("class");
-
+  setLoading();
   trigger.click(() => {
     filters.toggle();
     if (activeFilterIcon.includes("down")) {
@@ -19,6 +19,31 @@ const toggleFilters = () => {
     }
   });
 };
+
+async function findRepos(filter) {
+  // set loading
+  setLoading(true);
+  clearRepos();
+  if (filter === "all" || !filter) {
+    filter = "";
+  }
+
+  const response = await fetch(
+    `http://localhost:5000/api/repos/find/?filter=${filter}`,
+    {
+      method: "GET",
+    }
+  );
+  const data = await response.json();
+  let reposWithImages = data.map((repo) => {
+    repo.image = imageBuilder(filter, repo.name, repo.language);
+
+    return repo;
+  });
+
+  showResults(reposWithImages);
+  return reposWithImages;
+}
 const filterRepos = (repos, filter) => {
   setLoading();
 
@@ -38,33 +63,10 @@ const filterRepos = (repos, filter) => {
     repo.name.includes("day") && results.bitmaker.push(repo);
     repo.name.includes("wdi") && results.bitmaker.push(repo);
     repo.name.includes("game") && results.games.push(repo);
+    repo.name.includes("html5") && results.games.push(repo);
     repo.name.includes("rail") && results.rails.push(repo);
     repo.name.includes("ruby") && results.rails.push(repo);
   });
 
   return results[filter];
 };
-async function findRepos(filter) {
-  // set loading
-  setLoading(true);
-  clearRepos();
-  if (filter === "all" || !filter) {
-    filter = "";
-  }
-
-  const response = await fetch(
-    `https://jays-portfolio-backend.herokuapp.com/api/repos/find/?filter=${filter}`,
-    {
-      method: "GET",
-    }
-  );
-  const data = await response.json();
-  let reposWithImages = data.map((repo) => {
-    repo.image = imageBuilder(filter, repo.name, repo.language);
-
-    return repo;
-  });
-
-  showResults(reposWithImages);
-  return reposWithImages;
-}

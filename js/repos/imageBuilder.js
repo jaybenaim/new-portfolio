@@ -58,19 +58,19 @@ const imageBuilder = (filter, name, lang) => {
       rel: "https://icons8.com/icons/set/bootstrap",
     },
     shop: {
-      link: "../img/shopping-cart.png",
+      link: "../img/shopping-cart.jpg",
       rel: "https://pixabay.com/vectors/shopping-cart-shopping-icon-1105049/",
     },
     sell: {
-      link: "../img/shopping-cart.png",
+      link: "../img/shopping-cart.jpg",
       rel: "https://pixabay.com/vectors/shopping-cart-shopping-icon-1105049/",
     },
-    dolce: {
-      link: "../img/shopping-cart.png",
+    cookies: {
+      link: "../img/shopping-cart.jpg",
       rel: "https://pixabay.com/vectors/shopping-cart-shopping-icon-1105049/",
     },
     store: {
-      link: "../img/shopping-cart.png",
+      link: "../img/shopping-cart.jpg",
       rel: "https://pixabay.com/vectors/shopping-cart-shopping-icon-1105049/",
     },
     job: {
@@ -84,6 +84,11 @@ const imageBuilder = (filter, name, lang) => {
         "https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=2126876",
     },
     api: {
+      link: "../img/api-img.png",
+      rel:
+        "https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=2126876",
+    },
+    restful: {
       link: "../img/api-img.png",
       rel:
         "https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=2126876",

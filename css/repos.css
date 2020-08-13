@@ -46,10 +46,15 @@ body {
 }
 #repo__results li {
   margin-bottom: 4%;
+  overflow-y: hidden;
+}
+#repo__results .card-body {
+  overflow-y: hidden !important;
 }
 #repo__results .card {
   min-width: 160px;
   min-height: 100%;
+  overflow-y: hidden;
 }
 #repo__results .card-image {
   min-height: 120px;
@@ -107,6 +112,7 @@ body {
   #repo__results li {
     min-height: 200px;
     width: 170px;
+    overflow-y: hidden;
   }
   #repo__results li img {
     object-fit: contain;
@@ -189,11 +195,14 @@ body {
     margin: 0 auto;
     width: 100%;
     padding: 0;
-    max-height: 100%;
-    overflow-y: scroll;
   }
   #repo__results li {
     margin-bottom: 2%;
+    overflow-y: hidden;
+  }
+  #repo__results li img {
+    height: 200px;
+    object-fit: contain;
   }
   /* Filters */
   .repo-filter-trigger {
@@ -216,13 +225,22 @@ body {
     width: 100%;
     background: #d0e0df;
   }
+  .deployed-filter {
+    grid-column: 2;
+  }
   /* Pagination */
+  .pagination-container {
+    margin-top: 10%;
+  }
   .pagination {
     display: flex;
     flex-direction: row;
     position: relative;
     bottom: 5%;
     width: 92.5%;
+  }
+  .pagination .first-link {
+    margin-left: 10px !important;
   }
   .pagination .page-link {
     min-width: 100%;
@@ -234,4 +252,14 @@ body {
   .pagination .select-page {
     margin: 0 2.5%;
   }
+  #next-btn {
+    margin-left: 14%;
+  }
+  .page-section #repo__results {
+    max-height: 420px;
+  }
+}
+
+.page-section #repo__results {
+  overflow-y: scroll;
 }

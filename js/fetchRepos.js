@@ -53,7 +53,7 @@ async function fetchRepos(filter, startAt) {
   setLoading(true);
   startAt = !startAt ? 0 : Number(startAt) * 20;
   const response = await fetch(
-    `https://jays-portfolio-backend.herokuapp.com/api/repos?start_at=${startAt}`,
+    `http://localhost:5000/api/repos?start_at=${startAt}`,
     {
       method: "GET",
     }

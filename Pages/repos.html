@@ -167,7 +167,7 @@
             <input
               type="submit"
               class="btn btn-outline-primary repo-filter repo-filter-link"
-              name="java"
+              name="javascript"
               value="JavaScript"
             />
             <input
@@ -194,11 +194,18 @@
               name="ruby"
               value="Rails"
             />
+            <input
+              type="submit"
+              class="btn btn-outline-primary repo-filter repo-filter-link deployed-filter"
+              name="deployed"
+              value="Deployed Projects"
+            />
           </div>
         </div>
         <!-- Results -->
         <div class="spinner"></div>
         <ul id="repo__results"></ul>
+        <a href="#" class="back-to-top-btn">^</a>
 
         <div class="pagination-container">
           <ul class="pagination">
@@ -207,7 +214,7 @@
                 Prev
               </button>
             </li>
-            <li class="page-item select-page active">
+            <li class="page-item select-page active first-link">
               <span class="page-link page-link-item" value="1">1</span>
             </li>
             <li class="page-item select-page">
@@ -265,12 +272,8 @@
               <a href="https://github.com/jaybenaim" target="blank">
                 <i class="fa fa-github"></i>
               </a>
-
-              <a class="email-btn" href="#email" target="blank">
-                <i class="fa fa-envelope-open"></i>
-              </a>
             </div>
-            <p class="m-0 small">
+            <p class="m-0 small icons8">
               <a href="https://icons8.com/">Icons by Icons8</a>
             </p>
           </div>
