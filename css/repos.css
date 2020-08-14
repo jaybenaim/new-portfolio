@@ -121,6 +121,7 @@ body {
   #repo__results li .card-title {
     padding-bottom: 4%;
   }
+
   /* Pagination */
   .pagination-container {
     min-width: 2%;
@@ -166,6 +167,15 @@ body {
   }
   #repo__results li {
     margin: 10px auto;
+    width: 97%;
+  }
+  #repo__results .card-image {
+    width: 80%;
+    margin: 10% auto;
+  }
+  #repo__results img {
+    height: 200px;
+    display: flex;
   }
   /* Pagination */
   .pagination-container {

@@ -29,7 +29,7 @@ async function findRepos(filter) {
   }
 
   const response = await fetch(
-    `https://jays-portfolio-backend.herokuapp.com/api/repos/find/?filter=${filter}`,
+    `http://localhost:5000/api/repos/find/?filter=${filter}`,
     {
       method: "GET",
     }

@@ -32,7 +32,7 @@ const sendEmailToGmail = () => {
 };
 async function wakeupDb() {
   let hackerHunterUrl = "https://job-finder-web-scraper.herokuapp.com/api";
-  let backendUrl = "https://jays-portfolio-backend.herokuapp.com/api/";
+  let backendUrl = "http://localhost:5000/api/";
 
   const hackerHunterPromise = fetch(hackerHunterUrl);
   const backendPromise = fetch(backendUrl);
