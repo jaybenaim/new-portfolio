@@ -12,9 +12,13 @@ $(function () {
 
     if (this.name === "all") {
       fetchRepos(this.name);
+      setLoading(false);
+
       paginationContainer.show();
     } else {
       findRepos(this.name);
+      setLoading(false);
+
       paginationContainer.hide();
     }
   });
@@ -58,7 +62,7 @@ async function fetchRepos(filter, startAt) {
 
   startAt = !startAt ? 0 : Number(startAt) * 20;
   const response = await fetch(
-    `https://jaybenaim.github.io/api/repos?start_at=${startAt}`,
+    `https://jays-portfolio-backend.herokuapp.com/api/repos?start_at=${startAt}`,
     {
       method: "GET",
     }
