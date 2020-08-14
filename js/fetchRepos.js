@@ -8,16 +8,14 @@ $(function () {
   // filter
   $(".repo-filter-link").click(function () {
     let paginationContainer = $(".pagination-container");
-    setLoading(true, "spinner");
 
     if (this.name === "all") {
+      // paginated request
       fetchRepos(this.name);
-      setLoading(false);
 
       paginationContainer.show();
     } else {
       findRepos(this.name);
-      setLoading(false);
 
       paginationContainer.hide();
     }
@@ -59,7 +57,6 @@ $(function () {
 async function fetchRepos(filter, startAt) {
   // set loading
   setLoading(true, "spinner");
-
   startAt = !startAt ? 0 : Number(startAt) * 20;
   const response = await fetch(
     `https://jays-portfolio-backend.herokuapp.com/api/repos?start_at=${startAt}`,
@@ -72,8 +69,7 @@ async function fetchRepos(filter, startAt) {
     repo.image = imageBuilder(filter, repo.name);
     return repo;
   });
-  setLoading(false, "spinner");
-
+  setLoading(false);
   showResults(reposWithImages, filter);
 }
 
