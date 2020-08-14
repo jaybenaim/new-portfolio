@@ -503,10 +503,16 @@ footer .social-icons .fa {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-top: 3%;
+    padding-top: 3.5%;
   }
 }
 @media (min-width: 481px) {
+  #repo-section .back-to-top-btn {
+    position: fixed;
+    left: 3%;
+    bottom: 2%;
+    padding-top: 1%;
+  }
   .back-to-top-btn {
     position: fixed;
     bottom: 5%;
