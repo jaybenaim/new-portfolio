@@ -7,7 +7,6 @@ const toggleFilters = () => {
   let trigger = $(".repo-filter-trigger");
   let filters = $(".repo-filter");
   let activeFilterIcon = $("i").attr("class");
-  setLoading();
   trigger.click(() => {
     filters.toggle();
     if (activeFilterIcon.includes("down")) {
@@ -22,7 +21,8 @@ const toggleFilters = () => {
 
 async function findRepos(filter) {
   // set loading
-  setLoading(true);
+  setLoading(true, "spinner");
+
   clearRepos();
   if (filter === "all" || !filter) {
     filter = "";
@@ -40,12 +40,13 @@ async function findRepos(filter) {
 
     return repo;
   });
+  setLoading(false);
 
   showResults(reposWithImages);
   return reposWithImages;
 }
 const filterRepos = (repos, filter) => {
-  setLoading();
+  setLoading(true);
 
   if (filter === undefined) {
     filter = "all";
