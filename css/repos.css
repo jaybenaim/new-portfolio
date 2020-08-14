@@ -160,9 +160,7 @@ body {
     margin-top: 43px;
     margin-bottom: -9px;
   }
-  .page-item.active .page-link {
-    background: rgba(0, 173, 183, 0.65) !important;
-  }
+
   .pagination .page-link:hover,
   .pagination .page-item:hover {
     cursor: pointer;
@@ -304,4 +302,33 @@ body {
 
 .page-section #repo__results {
   overflow-y: scroll;
+}
+/* Star pagination */
+/* @media (max-width: 480px) {
+  .pagination .page-item {
+    background: url(../img/star2.png);
+    background-size: 100px 80px;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    width: 80px;
+    height: 66px;
+    margin-bottom: 14%;
+    background-position: center;
+  }
+  .pagination .page-link {
+    background: transparent;
+    border: none;
+    margin-top: 47px;
+    font-size: 1.3em;
+  }
+  .pagination .last-link {
+    margin-right: 10px;
+  }
+  .page-item.active .page-link {
+    height: 40px;
+  }
+} */
+.page-item.active .page-link {
+  background: rgba(0, 173, 183, 0.65) !important;
 }
