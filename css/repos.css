@@ -253,23 +253,23 @@ body {
     flex-direction: row;
     position: relative;
     bottom: 5%;
-    width: 92.5%;
+    width: 100%;
   }
   .pagination .first-link {
     margin-left: 10px !important;
   }
   .pagination .page-link {
-    min-width: 100%;
+    min-width: 38px;
     text-align: center;
     margin-top: 5%;
     color: #0085aa;
     border-radius: 20px;
   }
   .pagination .select-page {
-    margin: 0 2.5%;
+    margin: 0 auto;
   }
   #next-btn {
-    margin-left: 14%;
+    margin-left: 2%;
   }
   .page-section #repo__results {
     max-height: 420px;
